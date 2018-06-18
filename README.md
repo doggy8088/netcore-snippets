@@ -21,7 +21,7 @@ A set of pre-defined code snippets can boost your ASP.NET Core development produ
 | -------------------- | -------------------------------------------- |
 | ac-csproj            | Create Default ASP.NET Core 2 MSBuild file   |
 
-### C#
+### C\#
 
 | Prefix                   | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ |
