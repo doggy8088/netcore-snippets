@@ -15,26 +15,33 @@ A set of pre-defined code snippets can boost your ASP.NET Core development produ
 
 ## ASP.NET Core Snippets
 
+### MSBuild (.csproj)
+
+| Prefix               | Description                                  |
+| -------------------- | -------------------------------------------- |
+| ac-csproj            | Create Default ASP.NET Core 2 MSBuild file   |
+
 ### C#
 
-| Prefix               | Description                    |
-| -------------------- | -------------------------------|
-| ac-app-use           | app.Use()                      |
-| ac-app-run           | app.Run()                      |
-| ac-app-map           | app.Map()                      |
-| ac-program-cs        | Full `Program` code sample     |
-| ac-program-main      | `Main()` method in `Program`   |
-| ac-program-main-full | `Main()` method in `Program` with Full sample |
-| ac-api-controller    | Create an API Controller class |
-| ac-api-action        | Create an API Action: GET      |
-| ac-api-action-post   | Create an API Action: POST     |
-| ac-api-action-put    | Create an API Action: PUT      |
-| ac-api-action-delete | Create an API Action: DELETE   |
-| ac-svc-adddbcontext  | AddDbContext() in Startup.ConfigureService()   |
-| ac-svc-addmvc        | AddMvc() with AddJsonOptions() in Startup.ConfigureService()   |
-| ac-svc-addspastaticfiles | AddSpaStaticFiles()() in Startup.ConfigureService()   |
-| ac-svc-addsingleton  | AddSingleton() in Startup.ConfigureService()   |
-| ac-use-spa           | UseSpa() in Startup.Configure()   |
+| Prefix                   | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| ac-program-cs            | Basic `Program` class                                        |
+| ac-program-main          | `Main()` method in `Program`                                 |
+| ac-program-main-full     | `Main()` method in `Program` with Full sample                |
+| ac-startup               | Basic `Startup` class                                        |
+| ac-app-use               | app.Use()                                                    |
+| ac-app-run               | app.Run()                                                    |
+| ac-app-map               | app.Map()                                                    |
+| ac-svc-adddbcontext      | AddDbContext() in Startup.ConfigureService()                 |
+| ac-svc-addmvc            | AddMvc() with AddJsonOptions() in Startup.ConfigureService() |
+| ac-svc-addspastaticfiles | AddSpaStaticFiles()() in Startup.ConfigureService()          |
+| ac-svc-addsingleton      | AddSingleton() in Startup.ConfigureService()                 |
+| ac-use-spa               | UseSpa() in Startup.Configure()                              |
+| ac-api-controller        | Create an API Controller class                               |
+| ac-api-action            | Create an API Action: GET                                    |
+| ac-api-action-post       | Create an API Action: POST                                   |
+| ac-api-action-put        | Create an API Action: PUT                                    |
+| ac-api-action-delete     | Create an API Action: DELETE                                 |
 
 ### JSON
 
@@ -53,13 +60,13 @@ A set of pre-defined code snippets can boost your ASP.NET Core development produ
 
 ### JSON
 
-| Prefix               | Description                        |
-| -------------------- | ---------------------------------- |
-| ac-connstr           | Create `ConnectionStrings` section |
+| Prefix               | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
+| ac-connstr           | Create `ConnectionStrings` section                                  |
 | ac-connstr-trusted   | Create `ConnectionStrings` section with Trusted_Connection template |
 | ac-connstr-ip        | Create `ConnectionStrings` section with IP_Connection template      |
-| connstr-trusted      | Create a `ConnectionStrings` item with Trusted_Connection template |
-| connstr-ip           | Create a `ConnectionStrings` item with IP_Connection template      |
+| connstr-trusted      | Create a `ConnectionStrings` item with Trusted_Connection template  |
+| connstr-ip           | Create a `ConnectionStrings` item with IP_Connection template       |
 
 ## Contributing
 
