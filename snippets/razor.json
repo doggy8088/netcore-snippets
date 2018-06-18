@@ -1,0 +1,406 @@
+{
+	"@inject": {
+		"prefix": "ac-inject",
+		"body": [
+			"@inject ${1:Type} ${2:variableName}"
+		],
+		"description": "Generate an @inject block."
+	},
+	"<environment include> TagHelper in Razor": {
+		"prefix": "ac-environment",
+		"body": [
+			"<environment include=\"${1|Development,Production,Staging|}\">",
+			"    $0$TM_SELECTED_TEXT",
+			"</environment>",
+			""
+		],
+		"description": "Generate an <environment include=\"\"> block."
+	},
+	"<environment exclude> TagHelper in Razor": {
+		"prefix": "ac-environment-exclude",
+		"body": [
+			"<environment exclude=\"${1|Development,Production,Staging|}\">",
+			"    $0$TM_SELECTED_TEXT",
+			"</environment>",
+			""
+		],
+		"description": "Generate an <environment exclude=\"\"> block."
+	},
+	"HtmlHelper-ActionLink": {
+		"prefix": "@Html.ActionLink",
+		"body": [
+			"@Html.ActionLink(\"${1:linkText}\", \"${2:actionName}\", \"${3:controllerName}\")"
+		],
+		"description": ""
+	},
+	"UrlHelper-Action": {
+		"prefix": "@Url.Action",
+		"body": [
+			"@Url.Action(\"${2:actionName}\", \"${3:controllerName}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Action": {
+		"prefix": "@Html.Action",
+		"body": [
+			"@Html.Action(\"${2:actionName}\", \"${3:controllerName}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Partial": {
+		"prefix": "@Html.Partial",
+		"body": [
+			"@Html.Partial(\"${1:partialViewName}\", ${2:Model})"
+		],
+		"description": ""
+	},
+
+	"HtmlHelper-BeginForm": {
+		"prefix": "@Html.BeginForm",
+		"body": [
+			"@using(Html.BeginForm()) {",
+			"    $0$TM_SELECTED_TEXT",
+			"}"
+		],
+		"description": ""
+	},
+	"HtmlHelper-BeginForm-enctype": {
+		"prefix": "@Html.BeginForm-enctype",
+		"body": [
+			"@Html.BeginForm(\"${1:actionName}\", \"${2:controllerName}\", FormMethod.${3|Post,Get|}, new { enctype = \"multipart/form-data\" })) {",
+			"    $0$TM_SELECTED_TEXT",
+			"}"
+		],
+		"description": ""
+	},
+	"HtmlHelper-AntiForgeryToken": {
+		"prefix": "@Html.AntiForgeryToken",
+		"body": [
+			"@Html.AntiForgeryToken()"
+		],
+		"description": ""
+	},
+
+	"HtmlHelper-Id": {
+		"prefix": "@Html.Id",
+		"body": [
+			"@Html.Id(\"${1:name}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Name": {
+		"prefix": "@Html.Name",
+		"body": [
+			"@Html.Name(\"${1:name}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Value": {
+		"prefix": "@Html.Value",
+		"body": [
+			"@Html.Value(\"${1:name}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-ValidationSummary": {
+		"prefix": "@Html.ValidationSummary",
+		"body": [
+			"@Html.ValidationSummary()"
+		],
+		"description": ""
+	},
+	"HtmlHelper-DropDownList": {
+		"prefix": "@Html.DropDownList",
+		"body": [
+			"@Html.DropDownList(\"${1:name}\", \"${2:--Select--}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-ListBox": {
+		"prefix": "@Html.ListBox",
+		"body": [
+			"@Html.ListBox(\"${1:name}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-CheckBox": {
+		"prefix": "@Html.CheckBox",
+		"body": [
+			"@Html.CheckBox(\"${1:name}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Label": {
+		"prefix": "@Html.Label",
+		"body": [
+			"@Html.Label(\"${1:name}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-TextBox": {
+		"prefix": "@Html.TextBox",
+		"body": [
+			"@Html.TextBox(\"${1:name}\", ${2:null}, new { @class = \"${3:form-control}\" })"
+		],
+		"description": ""
+	},
+	"HtmlHelper-TextArea": {
+		"prefix": "@Html.TextArea",
+		"body": [
+			"@Html.TextArea(\"${1:name}\", ${2:null}, new { @class = \"${3:form-control}\" })"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Password": {
+		"prefix": "@Html.Password",
+		"body": [
+			"@Html.Password(\"${1:name}\", ${2:null}, new { @class = \"${3:form-control}\" })"
+		],
+		"description": ""
+	},
+	"HtmlHelper-RadioButton": {
+		"prefix": "@Html.RadioButton",
+		"body": [
+			"@Html.RadioButton(\"${1:name}\", \"${2:value}\", new { @class = \"${3:form-control}\" })"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Hidden": {
+		"prefix": "@Html.Hidden",
+		"body": [
+			"@Html.Hidden(\"${1:name}\", \"${2:value}\")"
+		],
+		"description": ""
+	},
+
+	"HtmlHelper-IdFor": {
+		"prefix": "@Html.IdFor",
+		"body": [
+			"@Html.IdFor(m => m.${1:name})"
+		],
+		"description": ""
+	},
+	"HtmlHelper-NameFor": {
+		"prefix": "@Html.NameFor",
+		"body": [
+			"@Html.NameFor(m => m.${1:name})"
+		],
+		"description": ""
+	},
+	"HtmlHelper-ValueFor": {
+		"prefix": "@Html.ValueFor",
+		"body": [
+			"@Html.ValueFor(m => m.${1:name})"
+		],
+		"description": ""
+	},
+	"HtmlHelper-ValidationSummaryFor": {
+		"prefix": "@Html.ValidationSummaryFor",
+		"body": [
+			"@Html.ValidationSummaryFor()"
+		],
+		"description": ""
+	},
+	"HtmlHelper-DropDownListFor": {
+		"prefix": "@Html.DropDownListFor",
+		"body": [
+			"@Html.DropDownListFor(m => m.${1:name}, \"${2:--Select--}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-ListBoxFor": {
+		"prefix": "@Html.ListBoxFor",
+		"body": [
+			"@Html.ListBoxFor(m => m.${1:name})"
+		],
+		"description": ""
+	},
+	"HtmlHelper-CheckBoxFor": {
+		"prefix": "@Html.CheckBoxFor",
+		"body": [
+			"@Html.CheckBoxFor(m => m.${1:name})"
+		],
+		"description": ""
+	},
+	"HtmlHelper-LabelFor": {
+		"prefix": "@Html.LabelFor",
+		"body": [
+			"@Html.LabelFor(m => m.${1:name})"
+		],
+		"description": ""
+	},
+	"HtmlHelper-TextBoxFor": {
+		"prefix": "@Html.TextBoxFor",
+		"body": [
+			"@Html.TextBoxFor(m => m.${1:name}, ${2:null}, new { @class = \"${3:form-control}\" })"
+		],
+		"description": ""
+	},
+	"HtmlHelper-TextAreaFor": {
+		"prefix": "@Html.TextAreaFor",
+		"body": [
+			"@Html.TextAreaFor(m => m.${1:name}, ${2:null}, new { @class = \"${3:form-control}\" })"
+		],
+		"description": ""
+	},
+	"HtmlHelper-PasswordFor": {
+		"prefix": "@Html.PasswordFor",
+		"body": [
+			"@Html.PasswordFor(m => m.${1:name}, ${2:null}, new { @class = \"${3:form-control}\" })"
+		],
+		"description": ""
+	},
+	"HtmlHelper-RadioButtonFor": {
+		"prefix": "@Html.RadioButtonFor",
+		"body": [
+			"@Html.RadioButtonFor(m => m.${1:name}, \"${2:value}\", new { @class = \"${3:form-control}\" })"
+		],
+		"description": ""
+	},
+	"HtmlHelper-HiddenFor": {
+		"prefix": "@Html.HiddenFor",
+		"body": [
+			"@Html.HiddenFor(m => m.${1:name}, \"${2:value}\")"
+		],
+		"description": ""
+	},
+
+
+
+	"HtmlHelper-DisplayName": {
+		"prefix": "@Html.DisplayName",
+		"body": [
+			"@Html.DisplayName(\"${1:name}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Display": {
+		"prefix": "@Html.Display",
+		"body": [
+			"@Html.Display(\"${1:name}\")"
+		],
+		"description": ""
+	},
+	"HtmlHelper-Editor": {
+		"prefix": "@Html.Editor",
+		"body": [
+			"@Html.Editor(\"${1:name}\")"
+		],
+		"description": ""
+	},
+
+
+
+	"HtmlHelper-DisplayNameFor": {
+		"prefix": "@Html.DisplayNameFor",
+		"body": [
+			"@Html.DisplayNameFor(${1:m} => ${1}.${2:propertyName})"
+		],
+		"description": ""
+	},
+	"HtmlHelper-DisplayFor": {
+		"prefix": "@Html.DisplayFor",
+		"body": [
+			"@Html.DisplayFor(${1:m} => ${1}.${2:propertyName})"
+		],
+		"description": ""
+	},
+	"HtmlHelper-EditorFor": {
+		"prefix": "@Html.EditorFor",
+		"body": [
+			"@Html.EditorFor(${1:m} => ${1}.${2:propertyName})"
+		],
+		"description": ""
+	},
+
+	"HtmlHelper-DisplayForModel": {
+		"prefix": "@Html.DisplayForModel",
+		"body": [
+			"@Html.DisplayForModel()"
+		],
+		"description": ""
+	},
+	"HtmlHelper-EditorForModel": {
+		"prefix": "@Html.EditorForModel",
+		"body": [
+			"@Html.EditorForModel()"
+		],
+		"description": ""
+	},
+
+
+	"Razor-if": {
+		"prefix": "@if",
+		"body": [
+			"@if (${1:true})",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Razor-foreach": {
+		"prefix": "@foreach",
+		"body": [
+			"@foreach (var ${1:item} in ${2:Model})",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Razor-for": {
+		"prefix": "@for",
+		"body": [
+			"@for (int ${1:i} = 0; ${1} < ${2:length}; ${1}++)",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": ""
+	},
+	"Razor-ViewBag": {
+		"prefix": "@ViewBag",
+		"body": [
+			"@ViewBag.${1:viewBagName}"
+		],
+		"description": ""
+	},
+	"Razor-ViewData": {
+		"prefix": "@ViewData",
+		"body": [
+			"@ViewData[\"${1:ViewDataName}\"]"
+		],
+		"description": ""
+	},
+	"Razor-TempData": {
+		"prefix": "@TempData",
+		"body": [
+			"@TempData[\"${1:TempDataName}\"]"
+		],
+		"description": ""
+	},
+	"Razor-model": {
+		"prefix": "@model",
+		"body": [
+			"@model ${1:TModel}"
+		],
+		"description": ""
+	},
+	"Razor-RenderSection": {
+		"prefix": "@RenderSection",
+		"body": [
+			"@RenderSection(\"${1:name}\", required: ${2|false,true|})"
+		],
+		"description": ""
+	},
+	"Razor-section": {
+		"prefix": "@section",
+		"body": [
+			"@section ${1:sectionName} {",
+			"    $0$TM_SELECTED_TEXT",
+			"}"
+		],
+		"description": ""
+	}
+}

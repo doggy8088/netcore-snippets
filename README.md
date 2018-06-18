@@ -52,6 +52,64 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | ac-mvc-action            | Create a MVC Action                                         |
 | ac-mvc-action-async      | Create a MVC Async Action                                   |
 
+### Razor
+
+| Prefix                          | Description                                                  |
+| ------------------------------- | ------------------------------------------------------------ |
+| ac-inject                       | Generate an @inject block                                    |
+| ac-environment                  | Generate an `<environment include="">` block (Include surrounding snippet) |
+| ac-environment-exclude          | Generate an `<environment exclude="">` block (Include surrounding snippet) |
+|@Html.ActionLink                 |      |
+|@Url.Action                      |      |
+|@Html.Action                     |      |
+|@Html.Partial                    |      |
+|@Html.BeginForm                  |      |
+|@Html.BeginForm-enctype          |      |
+|@Html.AntiForgeryToken           |      |
+|@Html.Id                         |      |
+|@Html.Name                       |      |
+|@Html.Value                      |      |
+|@Html.ValidationSummary          |      |
+|@Html.DropDownList               |      |
+|@Html.ListBox                    |      |
+|@Html.CheckBox                   |      |
+|@Html.Label                      |      |
+|@Html.TextBox                    |      |
+|@Html.TextArea                   |      |
+|@Html.Password                   |      |
+|@Html.RadioButton                |      |
+|@Html.Hidden                     |      |
+|@Html.IdFor                      |      |
+|@Html.NameFor                    |      |
+|@Html.ValueFor                   |      |
+|@Html.ValidationSummaryFor       |      |
+|@Html.DropDownListFor            |      |
+|@Html.ListBoxFor                 |      |
+|@Html.CheckBoxFor                |      |
+|@Html.LabelFor                   |      |
+|@Html.TextBoxFor                 |      |
+|@Html.TextAreaFor                |      |
+|@Html.PasswordFor                |      |
+|@Html.RadioButtonFor             |      |
+|@Html.HiddenFor                  |      |
+|@Html.DisplayName                |      |
+|@Html.Display                    |      |
+|@Html.Editor                     |      |
+|@Html.DisplayNameFor             |      |
+|@Html.DisplayFor                 |      |
+|@Html.EditorFor                  |      |
+|@Html.DisplayForModel            |      |
+|@Html.EditorForModel             |      |
+|@if                              |      |
+|@foreach                         |      |
+|@for                             |      |
+|@ViewBag                         |      |
+|@ViewData                        |      |
+|@TempData                        |      |
+|@model                           |      |
+|@RenderSection                   |      |
+|@section                         |      |
+
 ### JSON (`appsettings.json`)
 
 | Prefix               | Description                        |
