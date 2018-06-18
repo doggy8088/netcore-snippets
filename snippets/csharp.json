@@ -333,16 +333,26 @@
         ],
         "description": "Snippet Description"
     },
-    "service.AddDbContext": {
+    "service.AddDbContext-UseSqlServer": {
         "prefix": "ac-svc-adddbcontext",
         "body": [
-            "services.AddDbContext<${ContextName}Context> (options =>",
-            "    options.UseSqlServer (Configuration.GetConnectionString (\"${DefaultConnection}\")));$0"
+            "services.AddDbContext<${1:ContextName}Context>(options =>",
+            "    options.UseSqlServer(Configuration.GetConnectionString(\"${2:DefaultConnection}\")));",
+            "$0"
         ],
-        "description": "Startup: services.AddDbContext in ConfigureServices() method"
+        "description": "Startup: services.AddDbContext() with UseSqlServer in ConfigureServices() method"
+    },
+    "service.AddDbContext-UseInMemoryDatabase": {
+        "prefix": "ac-svc-adddbcontext-inmemory",
+        "body": [
+            "services.AddDbContext<${1:ContextName}Context>(options =>",
+            "    options.UseInMemoryDatabase(\"${2:name}\"));",
+            "$0"
+        ],
+        "description": "Startup: services.AddDbContext() with UseInMemoryDatabase in ConfigureServices() method"
     },
     "service.AddMvc() with AddJsonOptions()": {
-        "prefix": "service-addmvc",
+        "prefix": "ac-svc-addmvc",
         "body": [
             "services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
             "    .AddJsonOptions(opt => {",

@@ -30,27 +30,28 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### C\#
 
-| Prefix                   | Description                                                  |
-| ------------------------ | ------------------------------------------------------------ |
-| ac-program-cs            | Create a basic `Program` class                                        |
-| ac-program-main          | Create `Main()` method in `Program`                          |
-| ac-program-main-full     | Create `Main()` method in `Program` with full pipeline       |
-| ac-startup               | Create a basic `Startup` class                               |
-| ac-app-use               | app.Use()                                                    |
-| ac-app-run               | app.Run()                                                    |
-| ac-app-map               | app.Map()                                                    |
-| ac-svc-adddbcontext      | AddDbContext() in Startup.ConfigureService()                 |
-| ac-svc-addmvc            | AddMvc() with AddJsonOptions() in Startup.ConfigureService() |
-| ac-svc-addspastaticfiles | AddSpaStaticFiles()() in Startup.ConfigureService()          |
-| ac-svc-addsingleton      | AddSingleton() in Startup.ConfigureService()                 |
-| ac-use-spa               | UseSpa() in Startup.Configure()                              |
-| ac-api-controller        | Create an API Controller class                               |
-| ac-api-action            | Create an API Action: GET                                    |
-| ac-api-action-post       | Create an API Action: POST                                   |
-| ac-api-action-put        | Create an API Action: PUT                                    |
-| ac-api-action-delete     | Create an API Action: DELETE                                 |
-| ac-mvc-action            | Create a MVC Action                                         |
-| ac-mvc-action-async      | Create a MVC Async Action                                   |
+| Prefix                       | Description                                                  |
+| ---------------------------- | ------------------------------------------------------------ |
+| ac-program-cs                | Create a basic `Program` class                               |
+| ac-program-main              | Create `Main()` method in `Program`                          |
+| ac-program-main-full         | Create `Main()` method in `Program` with full pipeline       |
+| ac-startup                   | Create a basic `Startup` class                               |
+| ac-app-use                   | app.Use()                                                    |
+| ac-app-run                   | app.Run()                                                    |
+| ac-app-map                   | app.Map()                                                    |
+| ac-svc-adddbcontext          | AddDbContext() with UseSqlServer in Startup.ConfigureService()        |
+| ac-svc-adddbcontext-inmemory | AddDbContext() with UseInMemoryDatabase in Startup.ConfigureService() |
+| ac-svc-addmvc                | AddMvc() with AddJsonOptions() in Startup.ConfigureService() |
+| ac-svc-addspastaticfiles     | AddSpaStaticFiles()() in Startup.ConfigureService()          |
+| ac-svc-addsingleton          | AddSingleton() in Startup.ConfigureService()                 |
+| ac-use-spa                   | UseSpa() in Startup.Configure()                              |
+| ac-api-controller            | Create an API Controller class                               |
+| ac-api-action                | Create an API Action: GET                                    |
+| ac-api-action-post           | Create an API Action: POST                                   |
+| ac-api-action-put            | Create an API Action: PUT                                    |
+| ac-api-action-delete         | Create an API Action: DELETE                                 |
+| ac-mvc-action                | Create a MVC Action                                          |
+| ac-mvc-action-async          | Create a MVC Async Action                                    |
 
 ### Razor
 
