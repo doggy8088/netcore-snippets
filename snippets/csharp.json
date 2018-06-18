@@ -1,0 +1,348 @@
+{
+    "Create app.Use": {
+        "prefix": "ac-app-use",
+        "body": [
+            "${1:app}.Use(async (context, next) => {",
+            "    await context.Response.WriteAsync(\"${2:text}\");$0",
+            "    await next();",
+            "});"
+        ],
+        "description": "Create app.Use() usage"
+    },
+    "Create app.Run": {
+        "prefix": "ac-app-run",
+        "body": [
+            "${1:app}.Run(async (context) => {",
+            "    await context.Response.WriteAsync(\"${2:text}\");",
+            "});"
+        ],
+        "description": "Create app.Use() usage"
+    },
+    "Create app.Map": {
+        "prefix": "ac-app-map",
+        "body": [
+            "${1:app}.Map(\"/${2:path}\", (app) =>",
+            "{",
+            "    $0",
+            "}"
+        ],
+        "description": "Create app.Use() usage"
+    },
+    "Create Program.cs": {
+        "prefix": "ac-program-cs",
+        "body": [
+			"using System;",
+			"using System.Collections.Generic;",
+			"using System.IO;",
+			"using System.Linq;",
+			"using System.Threading.Tasks;",
+			"using Microsoft.AspNetCore;",
+			"using Microsoft.AspNetCore.Hosting;",
+			"using Microsoft.Extensions.Configuration;",
+			"using Microsoft.Extensions.Logging;",
+			"",
+			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\\\/]+)$/$1/}}",
+			"{",
+			"    public class Program",
+			"    {",
+			"        public static void Main(string[] args)",
+			"        {",
+			"            CreateWebHostBuilder(args).Build().Run();$0",
+			"        }",
+			"",
+			"        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>",
+			"            WebHost.CreateDefaultBuilder(args)",
+			"                .UseStartup<Startup>();",
+			"    }",
+			"}",
+			""
+        ],
+        "description": "Create IWebHost"
+    },
+    "Create IWebHostBuilder": {
+        "prefix": "ac-program-main",
+        "body": [
+			"        public static void Main(string[] args)",
+			"        {",
+            "            WebHost.CreateDefaultBuilder(args)",
+            "                .UseStartup<Startup>();",
+            "                .Build()",
+            "                .Run();$0",
+			"        }",
+			""
+        ],
+        "description": "Create IWebHost"
+    },
+    "Create Full IWebHostBuilder": {
+        "prefix": "ac-program-main-full",
+        "body": [
+			"            var builder = new WebHostBuilder()",
+			"                .UseKestrel((builderContext, options) =>",
+			"                {",
+			"                    options.Configure(builderContext.Configuration.GetSection(\"Kestrel\"));",
+			"                })",
+			"                .UseContentRoot(Directory.GetCurrentDirectory())",
+			"                .ConfigureAppConfiguration((hostingContext, config) =>",
+			"                {",
+			"                    var env = hostingContext.HostingEnvironment;",
+			"",
+			"                    config.AddJsonFile(\"appsettings.json\", optional: true, reloadOnChange: true)",
+			"                          .AddJsonFile($\"appsettings.{env.EnvironmentName}.json\", optional: true, reloadOnChange: true);",
+			"",
+			"                    if (env.IsDevelopment())",
+			"                    {",
+			"                        var appAssembly = Assembly.Load(new AssemblyName(env.ApplicationName));",
+			"                        if (appAssembly != null)",
+			"                        {",
+			"                            config.AddUserSecrets(appAssembly, optional: true);",
+			"                        }",
+			"                    }",
+			"",
+			"                    config.AddEnvironmentVariables();",
+			"",
+			"                    if (args != null)",
+			"                    {",
+			"                        config.AddCommandLine(args);",
+			"                    }",
+			"                })",
+			"                .ConfigureLogging((hostingContext, logging) =>",
+			"                {",
+			"                    logging.AddConfiguration(hostingContext.Configuration.GetSection(\"Logging\"));",
+			"                    logging.AddConsole();",
+			"                    logging.AddDebug();",
+			"                })",
+			"                .ConfigureServices((hostingContext, services) =>",
+			"                {",
+			"                    // Fallback",
+			"                    services.PostConfigure<HostFilteringOptions>(options =>",
+			"                    {",
+			"                        if (options.AllowedHosts == null || options.AllowedHosts.Count == 0)",
+			"                        {",
+			"                            // \"AllowedHosts\": \"localhost;127.0.0.1;[::1]\"",
+			"                            var hosts = hostingContext.Configuration[\"AllowedHosts\"]?.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);",
+			"                            // Fall back to \"*\" to disable.",
+			"                            options.AllowedHosts = (hosts?.Length > 0 ? hosts : new[] { \"*\" });",
+			"                        }",
+			"                    });",
+			"                    // Change notification",
+			"                    services.AddSingleton<IOptionsChangeTokenSource<HostFilteringOptions>>(",
+			"                        new ConfigurationChangeTokenSource<HostFilteringOptions>(hostingContext.Configuration));",
+			"",
+			"                    // 由於 HostFilteringStartupFilter 被 Mark 為 internal 所以不能用！",
+			"                    // 但是這行主要目的是確保能使用 app.UseHostFiltering(); 過濾 Host Header 而已",
+			"                    // 參見：https://andrewlock.net/exploring-istartupfilter-in-asp-net-core/",
+			"                    // services.AddTransient<IStartupFilter, HostFilteringStartupFilter>();",
+			"                })",
+			"                .UseIISIntegration()",
+			"                .UseDefaultServiceProvider((context, options) =>",
+			"                {",
+			"                    options.ValidateScopes = context.HostingEnvironment.IsDevelopment();",
+			"                });",
+			"",
+			"            if (args != null)",
+			"            {",
+			"                builder.UseConfiguration(new ConfigurationBuilder().AddCommandLine(args).Build());",
+			"            }",
+			"",
+			"            builder.UseStartup<Startup>().Build().Run();"
+        ],
+        "description": "Create Full IWebHost"
+    },
+    "DbContext": {
+        "prefix": "ef-dbcontext",
+        "body": [
+            "using Microsoft.EntityFrameworkCore;",
+            "",
+            "namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models {",
+            "    public class ${2:${TM_FILENAME_BASE}} : DbContext {",
+            "        public ${2} (DbContextOptions<${2}> options) : base (options) { }",
+            "        public DbSet<${3:EntityName}> ${4:${3}s}$0 { get; set; }",
+            "    }",
+            "}"
+        ],
+        "description": "Create a DbContext class under Models/ folder"
+    },
+    "Create API Controller": {
+        "prefix": "ac-api-controller",
+        "body": [
+            "using System;",
+            "using System.Collections.Generic;",
+            "using System.Linq;",
+            "using System.Threading.Tasks;",
+            "using Microsoft.AspNetCore.Mvc;",
+            "using ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models;",
+            "",
+            "namespace ${1}.Controllers",
+            "{",
+            "    [Route(\"api/[controller]\")]",
+            "    public class ${2:${TM_FILENAME_BASE/Controller//}}Controller : Controller",
+            "    {",
+            "        public ${2}Controller() { }",
+            "",
+            "        // GET api/${3:${TM_FILENAME_BASE/(.*)Controller/${1:/downcase}/}}",
+            "        [HttpGet(\"[action]\")]",
+            "        public ActionResult<IEnumerable<${4:string}>> Get${5}s$0()",
+            "        {",
+            "            return new string[] { \"value1\", \"value2\" };",
+            "        }",
+            "",
+            "        // GET api/${3}/5",
+            "        [HttpGet(\"[action]/{id}\")]",
+            "        public ActionResult<${4}> Get${5}ById(int id)",
+            "        {",
+            "            return \"value\" + id;",
+            "        }",
+            "",
+            "        // POST api/${3}",
+            "        [HttpPost(\"[action]\")]",
+            "        public void Post${5}([FromBody] ${4} value) { }",
+            "",
+            "        // PUT api/${3}/5",
+            "        [HttpPut(\"[action]/{id}\")]",
+            "        public void Put${5}(int id, [FromBody] ${4} value) { }",
+            "",
+            "        // DELETE api/${3}/5",
+            "        [HttpDelete(\"[action]/{id}\")]",
+            "        public void Delete${5}ById(int id) { }",
+            "    }",
+            "}"
+        ],
+        "description": "Create API Controller"
+    },
+    "Create API action method: GET": {
+        "prefix": "ac-api-action",
+        "body": [
+            "[HttpGet(\"${1:[action]}\")]",
+            "public ActionResult<IEnumerable<${2:string}>> Get${3}() {",
+            "    $0",
+            "}",
+            ""
+        ],
+        "description": "Create a API action method"
+    },
+    "Create API action method: POST": {
+        "prefix": "ac-api-action-post",
+        "body": [
+            "[HttpPost(\"${1:[action]}\")]",
+            "public void Post${2}([FromBody] ${3:string} value) {",
+            "    $0",
+            "}",
+            ""
+        ],
+        "description": "Create a API action method: POST"
+    },
+    "Create API action method: PUT": {
+        "prefix": "ac-api-action-put",
+        "body": [
+            "[HttpPut(\"${1:[action]}/{id}\")]",
+            "public void Put${2}(int id, [FromBody] ${3:string} value) {",
+            "    $0",
+            "}",
+            ""
+        ],
+        "description": "Create a API action method: PUT"
+    },
+    "Create API action method: DELETE": {
+        "prefix": "ac-api-action-delete",
+        "body": [
+            "[HttpDelete(\"${1:[action]}/{id}\")]",
+            "public void Delete${2}ById(int id) {",
+            "    $0",
+            "}",
+            ""
+        ],
+        "description": "Create a API action method: DELETE"
+    },
+    "service.AddDbContext": {
+        "prefix": "ac-svc-adddbcontext",
+        "body": [
+            "services.AddDbContext<${ContextName}Context> (options =>",
+            "    options.UseSqlServer (Configuration.GetConnectionString (\"${DefaultConnection}\")));$0"
+        ],
+        "description": "Startup: services.AddDbContext in ConfigureServices() method"
+    },
+    "service.AddMvc() with AddJsonOptions()": {
+        "prefix": "service-addmvc",
+        "body": [
+            "services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
+            "    .AddJsonOptions(opt => {",
+            "        opt.SerializerSettings.Converters.Add(new ${1:Converter}());",
+            "    });"
+        ],
+        "description": "Startup: services.AddMvc() on ConfigureServices()"
+    },
+    "services.AddSpaStaticFiles()": {
+        "prefix": "ac-svc-addspastaticfiles",
+        "body": [
+            "// In production, the Angular files will be served from this directory",
+            "services.AddSpaStaticFiles(configuration =>",
+            "{",
+            "    configuration.RootPath = \"ClientApp/dist\";",
+            "});"
+        ],
+        "description": "Startup: services.AddSpaStaticFiles()"
+    },
+    "service.AddSingleton()": {
+        "prefix": "ac-svc-addsingleton",
+        "body": [
+            "services.AddSingleton<${1:IConfiguration}>(${2:Configuration});",
+            "$0"
+        ],
+        "description": "Startup: services.AddMvc() on ConfigureServices()"
+    },
+    "app.UseSpa": {
+        "prefix": "ac-use-spa",
+        "body": [
+            "app.UseSpa(spa =>",
+            "{",
+            "    // To learn more about options for serving an Angular SPA from ASP.NET Core,",
+            "    // see https://go.microsoft.com/fwlink/?linkid=864501",
+            "",
+            "    spa.Options.SourcePath = \"ClientApp\";",
+            "",
+            "    // https://docs.microsoft.com/en-us/aspnet/core/spa/angular?view=aspnetcore-2.1&tabs=visual-studio#server-side-rendering",
+            "    // https://github.com/maciejtreder/ng-toolkit/tree/master/schematics/universal",
+            "    spa.UseSpaPrerendering(options =>",
+            "    {",
+            "        options.BootModulePath = \\$\"{spa.Options.SourcePath}/dist-server/main.bundle.js\";",
+            "        options.BootModuleBuilder = env.IsDevelopment()",
+            "            ? new AngularCliBuilder(npmScript: \"build:prod\")",
+            "            : null;",
+            "        options.ExcludeUrls = new[] { \"/sockjs-node\" };",
+            "    });",
+            "",
+            "    if (env.IsDevelopment())",
+            "    {",
+            "        spa.UseAngularCliServer(npmScript: \"start\");",
+            "        //spa.UseProxyToSpaDevelopmentServer(\"http://localhost:4200\");",
+            "    }",
+            "});"
+        ],
+        "description": "Startup: app.UseSpa()"
+    },
+    "GetConnectionString": {
+        "prefix": "nc-get-connstr",
+        "body": [
+            "// Remember add the following lines to your *.csproj file",
+            "// <ItemGroup>",
+            "//   <Content Update=\"appsettings.json\">",
+            "//     <CopyToOutputDirectory>Always</CopyToOutputDirectory>",
+            "//   </Content>",
+            "// </ItemGroup>",
+            "",
+            "var environmentName = Environment.GetEnvironmentVariable (\"ASPNETCORE_ENVIRONMENT\");",
+            "",
+            "var builder = new Microsoft.Extensions.Configuration.ConfigurationBuilder()",
+            "    .SetBasePath (AppContext.BaseDirectory)",
+            "    .AddJsonFile (\"appsettings.json\")",
+            "    .AddJsonFile ($\"appsettings.{environmentName}.json\", true)",
+            "    .AddEnvironmentVariables();",
+            "",
+            "var config = builder.Build();",
+            "",
+            "var ${2:connstr} = config.GetConnectionString (\"${1:DefaultConnection}\");",
+            "$0"
+        ],
+        "description": "config.GetConnectionString()"
+    }
+}

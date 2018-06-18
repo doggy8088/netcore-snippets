@@ -1,0 +1,81 @@
+{
+	"appsettings.json": {
+		"prefix": "ac-appsettings",
+		"body": [
+			"{",
+			"    \"ConnectionStrings\": {",
+			"        $0",
+			"    },",
+			"    \"Logging\": {",
+			"        \"LogLevel\": {",
+			"            \"Default\": \"${1|Warning,Information,Debug,Trace,Error,Critical,None|}\"",
+			"        }",
+			"    },",
+			"    \"AllowedHosts\": \"*\"",
+			"}",
+			""
+		],
+		"description": "appsettings.json"
+	},
+	"appsettings.json-Logging": {
+		"prefix": "ac-logging",
+		"body": [
+			"\"Debug\": {",
+			"    \"LogLevel\": {",
+			"        \"Default\": \"${1|Warning,Information,Debug,Trace,Error,Critical,None|}\"",
+			"    }",
+			"},",
+			"\"Console\": {",
+			"    \"IncludeScopes\": false,",
+			"    \"LogLevel\": {",
+			"        \"Microsoft.AspNetCore.Mvc.Razor.Internal\": \"${2|Warning,Information,Debug,Trace,Error,Critical,None|}\",",
+			"        \"Microsoft.AspNetCore.Mvc.Razor.Razor\": \"${3|Warning,Information,Debug,Trace,Error,Critical,None|}\",",
+			"        \"Microsoft.AspNetCore.Mvc.Razor\": \"${4|Warning,Information,Debug,Trace,Error,Critical,None|}\",",
+			"        \"Default\": \"${5|Warning,Information,Debug,Trace,Error,Critical,None|}\"",
+			"    }",
+			"},"
+		],
+		"description": "Logging in appsettings.json"
+	},
+	"ConnectionStrings": {
+		"prefix": "ac-connstr",
+		"body": [
+			"\"ConnectionStrings\": {",
+			"    $1",
+			"},$0"
+		],
+		"description": "ConnectionStrings for appsettings.json"
+	},
+	"ConnectionStrings-Trusted": {
+		"prefix": "ac-connstr-trusted",
+		"body": [
+			"\"ConnectionStrings\": {",
+			"  \"DefaultConnection\": \"Server=${1:(localdb)\\\\\\\\MSSQLLocalDB};Database=${2:DBName};Trusted_Connection=True;MultipleActiveResultSets=true\"",
+			"},$0"
+		],
+		"description": "ConnectionStrings for appsettings.json"
+	},
+	"ConnectionStrings-IP": {
+		"prefix": "ac-connstr-ip",
+		"body": [
+			"\"ConnectionStrings\": {",
+			"  \"DefaultConnection\": \"Server=${1:10.0.0.1};Database=${2:DBName};User Id=${3:LoginName};Password=${4:Password};;MultipleActiveResultSets=true\"",
+			"},$0"
+		],
+		"description": "ConnectionStrings for appsettings.json"
+	},
+	"ConnectionString-Trusted": {
+		"prefix": "connstr-trusted",
+		"body": [
+			"\"${1:DefaultConnection}\": \"Server=${2:(localdb)\\\\\\\\MSSQLLocalDB};Database=${3:DBName};Trusted_Connection=True;MultipleActiveResultSets=true\"$0",
+		],
+		"description": "ConnectionStrings for Trusted Connection"
+	},
+	"ConnectionString-IP": {
+		"prefix": "connstr-ip",
+		"body": [
+			"\"${1:DefaultConnection}\": \"Server=${2:10.0.0.1};Database=${3:DBName};User Id=${4:LoginName};Password=${5:Password};;MultipleActiveResultSets=true\"$0",
+		],
+		"description": "ConnectionStrings for IP Connection"
+	}
+}
