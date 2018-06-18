@@ -180,29 +180,29 @@
             "        public ${2}Controller() { }",
             "",
             "        // GET api/${3:${TM_FILENAME_BASE/(.*)Controller/${1:/downcase}/}}",
-            "        [HttpGet(\"[action]\")]",
+            "        [HttpGet(\"\")]",
             "        public ActionResult<IEnumerable<${4:string}>> Get${5}s$0()",
             "        {",
             "            return new string[] { \"value1\", \"value2\" };",
             "        }",
             "",
             "        // GET api/${3}/5",
-            "        [HttpGet(\"[action]/{id}\")]",
+            "        [HttpGet(\"{id}\")]",
             "        public ActionResult<${4}> Get${5}ById(int id)",
             "        {",
             "            return \"value\" + id;",
             "        }",
             "",
             "        // POST api/${3}",
-            "        [HttpPost(\"[action]\")]",
+            "        [HttpPost(\"\")]",
             "        public void Post${5}([FromBody] ${4} value) { }",
             "",
             "        // PUT api/${3}/5",
-            "        [HttpPut(\"[action]/{id}\")]",
+            "        [HttpPut(\"{id}\")]",
             "        public void Put${5}(int id, [FromBody] ${4} value) { }",
             "",
             "        // DELETE api/${3}/5",
-            "        [HttpDelete(\"[action]/{id}\")]",
+            "        [HttpDelete(\"{id}\")]",
             "        public void Delete${5}ById(int id) { }",
             "    }",
             "}"
@@ -212,7 +212,7 @@
     "Create API action method: GET": {
         "prefix": "ac-api-action",
         "body": [
-            "[HttpGet(\"${1:[action]}\")]",
+            "[HttpGet(\"${1}\")]",
             "public ActionResult<IEnumerable<${2:string}>> Get${3}() {",
             "    $0",
             "}",
@@ -220,10 +220,35 @@
         ],
         "description": "Create a API action method"
     },
+    "Create MVC Action": {
+        "prefix": "ac-mvc-action",
+        "body": [
+            "public IActionResult ${1:ActionName}()",
+            "{",
+            "    // TODO: Your code here",
+            "    return View();",
+            "}",
+            ""
+        ],
+        "description": "Create a MVC action method"
+    },
+    "Create MVC Async Action": {
+        "prefix": "ac-mvc-action-async",
+        "body": [
+            "public async Task<IActionResult> ${1:ActionName}()",
+            "{",
+            "    // TODO: Your code here",
+            "    await Task.Yield();",
+            "    return View();",
+            "}",
+            ""
+        ],
+        "description": "Create a MVC Async Action"
+    },
     "Create API action method: POST": {
         "prefix": "ac-api-action-post",
         "body": [
-            "[HttpPost(\"${1:[action]}\")]",
+            "[HttpPost(\"${1}\")]",
             "public void Post${2}([FromBody] ${3:string} value) {",
             "    $0",
             "}",
@@ -234,7 +259,7 @@
     "Create API action method: PUT": {
         "prefix": "ac-api-action-put",
         "body": [
-            "[HttpPut(\"${1:[action]}/{id}\")]",
+            "[HttpPut(\"${1}/{id}\")]",
             "public void Put${2}(int id, [FromBody] ${3:string} value) {",
             "    $0",
             "}",
@@ -245,7 +270,7 @@
     "Create API action method: DELETE": {
         "prefix": "ac-api-action-delete",
         "body": [
-            "[HttpDelete(\"${1:[action]}/{id}\")]",
+            "[HttpDelete(\"${1}/{id}\")]",
             "public void Delete${2}ById(int id) {",
             "    $0",
             "}",

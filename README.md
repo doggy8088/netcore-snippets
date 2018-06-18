@@ -42,6 +42,8 @@ A set of pre-defined code snippets can boost your ASP.NET Core development produ
 | ac-api-action-post       | Create an API Action: POST                                   |
 | ac-api-action-put        | Create an API Action: PUT                                    |
 | ac-api-action-delete     | Create an API Action: DELETE                                 |
+| ac-mvc-action            | Create an MVC Action                                         |
+| ac-mvc-action-async      | Create an MVC Async Action                                   |
 
 ### JSON
 
