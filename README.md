@@ -2,9 +2,16 @@
 
 This extension is optimized for developers who wants to develop ASP.NET Core 2 and Entity Framework Core 2.  These code snippets contains **C#** and **JSON** snippets.  So you can even write your own `appsettings.json` using my code snippets in a rocket speed.
 
+This extension is still in progress.  [Let me know](https://github.com/doggy8088/netcore-snippets/issues) if you have any suggestion! Thanks!
+
 ## Features
 
-A set of pre-defined code snippets can boost your ASP.NET Core development productivity.
+* Guess your project's namespace when creating a API Controller
+* Add constructor method when creating a API Controller
+* Create `ConnectionStrings` in `appsettings.json` quickly
+* Including common usages in `Startup` class
+* Including Entity Framework Core common code patterns
+* Createing `UseSpa()` snippet for ASP.NET Core 2.1
 
 ## Snippet Prefixes
 
@@ -15,7 +22,7 @@ A set of pre-defined code snippets can boost your ASP.NET Core development produ
 
 ## ASP.NET Core Snippets
 
-### MSBuild (.csproj)
+### MSBuild (`.csproj`)
 
 | Prefix               | Description                                  |
 | -------------------- | -------------------------------------------- |
@@ -25,10 +32,10 @@ A set of pre-defined code snippets can boost your ASP.NET Core development produ
 
 | Prefix                   | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ |
-| ac-program-cs            | Basic `Program` class                                        |
-| ac-program-main          | `Main()` method in `Program`                                 |
-| ac-program-main-full     | `Main()` method in `Program` with Full sample                |
-| ac-startup               | Basic `Startup` class                                        |
+| ac-program-cs            | Create a basic `Program` class                                        |
+| ac-program-main          | Create `Main()` method in `Program`                          |
+| ac-program-main-full     | Create `Main()` method in `Program` with full pipeline       |
+| ac-startup               | Create a basic `Startup` class                               |
 | ac-app-use               | app.Use()                                                    |
 | ac-app-run               | app.Run()                                                    |
 | ac-app-map               | app.Map()                                                    |
@@ -42,10 +49,10 @@ A set of pre-defined code snippets can boost your ASP.NET Core development produ
 | ac-api-action-post       | Create an API Action: POST                                   |
 | ac-api-action-put        | Create an API Action: PUT                                    |
 | ac-api-action-delete     | Create an API Action: DELETE                                 |
-| ac-mvc-action            | Create an MVC Action                                         |
-| ac-mvc-action-async      | Create an MVC Async Action                                   |
+| ac-mvc-action            | Create a MVC Action                                         |
+| ac-mvc-action-async      | Create a MVC Async Action                                   |
 
-### JSON
+### JSON (`appsettings.json`)
 
 | Prefix               | Description                        |
 | -------------------- | ---------------------------------- |
@@ -54,7 +61,7 @@ A set of pre-defined code snippets can boost your ASP.NET Core development produ
 
 ## Entity Framework Core Snippets
 
-### C#
+### C\#
 
 | Prefix               | Description                    |
 | -------------------- | -------------------------------|
