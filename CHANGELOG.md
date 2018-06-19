@@ -2,6 +2,6 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
-## 0.0.13 - 2018-06-19
+## 0.0.14 - 2018-06-19
 
 * Initial release
