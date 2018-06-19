@@ -38,7 +38,7 @@
 		"description": "Logging in appsettings.json"
 	},
 	"ConnectionStrings": {
-		"prefix": "ac-connstr",
+		"prefix": "connstr",
 		"body": [
 			"\"ConnectionStrings\": {",
 			"    $1",

@@ -1,13 +1,33 @@
 {
 	"@inject": {
-		"prefix": "ac-inject",
+		"prefix": "@inject",
 		"body": [
 			"@inject ${1:Type} ${2:variableName}"
 		],
 		"description": "Generate an @inject block."
 	},
+	"environment include> TagHelper in Razor": {
+		"prefix": "environment",
+		"body": [
+			"environment include=\"${1|Development,Production,Staging|}\">",
+			"    $0",
+			"</environment>",
+			""
+		],
+		"description": "Generate an <environment include=\"\"> block. Triggered by <env"
+	},
+	"environment exclude> TagHelper in Razor": {
+		"prefix": "environment-exclude",
+		"body": [
+			"environment exclude=\"${1|Development,Production,Staging|}\">",
+			"    $0",
+			"</environment>",
+			""
+		],
+		"description": "Generate an <environment exclude=\"\"> block. Triggered by <env"
+	},
 	"<environment include> TagHelper in Razor": {
-		"prefix": "ac-environment",
+		"prefix": "@environment",
 		"body": [
 			"<environment include=\"${1|Development,Production,Staging|}\">",
 			"    $0$TM_SELECTED_TEXT",
@@ -17,7 +37,7 @@
 		"description": "Generate an <environment include=\"\"> block."
 	},
 	"<environment exclude> TagHelper in Razor": {
-		"prefix": "ac-environment-exclude",
+		"prefix": "@environment-exclude",
 		"body": [
 			"<environment exclude=\"${1|Development,Production,Staging|}\">",
 			"    $0$TM_SELECTED_TEXT",
