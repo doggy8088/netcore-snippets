@@ -1,6 +1,6 @@
 {
     "Create app.Use": {
-        "prefix": "ac-app-use",
+        "prefix": "app-use",
         "body": [
             "${1:app}.Use(async (context, next) => {",
             "    await context.Response.WriteAsync(\"${2:text}\");$0",
@@ -10,7 +10,7 @@
         "description": "Create app.Use() usage"
     },
     "Create app.Run": {
-        "prefix": "ac-app-run",
+        "prefix": "app-run",
         "body": [
             "${1:app}.Run(async (context) => {",
             "    await context.Response.WriteAsync(\"${2:text}\");",
@@ -19,7 +19,7 @@
         "description": "Create app.Use() usage"
     },
     "Create app.Map": {
-        "prefix": "ac-app-map",
+        "prefix": "app-map",
         "body": [
             "${1:app}.Map(\"/${2:path}\", (app) =>",
             "{",
@@ -334,7 +334,7 @@
         "description": "Snippet Description"
     },
     "service.AddDbContext-UseSqlServer": {
-        "prefix": "ac-svc-adddbcontext",
+        "prefix": "services-adddbcontext",
         "body": [
             "services.AddDbContext<${1:ContextName}Context>(options =>",
             "    options.UseSqlServer(Configuration.GetConnectionString(\"${2:DefaultConnection}\")));",
@@ -343,7 +343,7 @@
         "description": "Startup: services.AddDbContext() with UseSqlServer in ConfigureServices() method"
     },
     "service.AddDbContext-UseInMemoryDatabase": {
-        "prefix": "ac-svc-adddbcontext-inmemory",
+        "prefix": "services-adddbcontext-inmemory",
         "body": [
             "services.AddDbContext<${1:ContextName}Context>(options =>",
             "    options.UseInMemoryDatabase(\"${2:name}\"));",
@@ -352,7 +352,7 @@
         "description": "Startup: services.AddDbContext() with UseInMemoryDatabase in ConfigureServices() method"
     },
     "service.AddMvc() with AddJsonOptions()": {
-        "prefix": "ac-svc-addmvc",
+        "prefix": "services-addmvc",
         "body": [
             "services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
             "    .AddJsonOptions(opt => {",
@@ -362,7 +362,7 @@
         "description": "Startup: services.AddMvc() on ConfigureServices()"
     },
     "services.AddSpaStaticFiles()": {
-        "prefix": "ac-svc-addspastaticfiles",
+        "prefix": "services-addspastaticfiles",
         "body": [
             "// In production, the Angular files will be served from this directory",
             "services.AddSpaStaticFiles(configuration =>",
@@ -372,16 +372,40 @@
         ],
         "description": "Startup: services.AddSpaStaticFiles()"
     },
-    "service.AddSingleton()": {
-        "prefix": "ac-svc-addsingleton",
+    "service.AddTransient()": {
+        "prefix": "services-addtransient",
         "body": [
-            "services.AddSingleton<${1:IConfiguration}>(${2:Configuration});",
+            "services.AddTransient<I${1:TypeName}, ${2:${1}}>();",
             "$0"
         ],
-        "description": "Startup: services.AddMvc() on ConfigureServices()"
+        "description": "Startup: services.AddTransient() on ConfigureServices()"
+    },
+    "service.AddScoped()": {
+        "prefix": "services-addscoped",
+        "body": [
+            "services.AddScoped<I${1:TypeName}, ${2:${1}}>();",
+            "$0"
+        ],
+        "description": "Startup: services.AddScoped() on ConfigureServices()"
+    },
+    "service.AddSingleton()": {
+        "prefix": "services-addsingleton-1",
+        "body": [
+            "services.AddSingleton<I${1:TypeName}, ${2:${1}}>();",
+            "$0"
+        ],
+        "description": "Startup: services.AddSingleton() on ConfigureServices()"
+    },
+    "service.AddSingleton(instance)": {
+        "prefix": "services-addsingleton-2",
+        "body": [
+            "services.AddSingleton<I${1:Configuration}>(${2:${1}});",
+            "$0"
+        ],
+        "description": "Startup: services.AddSingleton() on ConfigureServices()"
     },
     "app.UseSpa": {
-        "prefix": "ac-use-spa",
+        "prefix": "app-use-spa",
         "body": [
             "app.UseSpa(spa =>",
             "{",

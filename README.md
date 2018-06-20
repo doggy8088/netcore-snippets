@@ -15,10 +15,12 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ## Snippet Prefixes
 
-| Prefix  | Description                    |
-| ------- | -------------------------------|
-| ac-     | ASP.NET Core Snippets          |
-| ef-     | Entity Framework Core Snippets |
+| Prefix    | Description                           |
+| --------- | ------------------------------------- |
+| ac-       | ASP.NET Core Snippets                 |
+| services- | ASP.NET Core Snippets in `Startup.cs` |
+| app-      | ASP.NET Core Snippets in `Startup.cs` |
+| ef-       | Entity Framework Core Snippets        |
 
 ## ASP.NET Core Snippets
 
@@ -30,28 +32,31 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### C\#
 
-| Prefix                       | Description                                                                       |
-| ---------------------------- | --------------------------------------------------------------------------------- |
-| ac-program-cs                | Generates a basic `Program` class                                                 |
-| ac-program-main              | Generates `Main()` method in `Program`                                            |
-| ac-program-main-full         | Generates `Main()` method in `Program` with full pipeline                         |
-| ac-startup                   | Generates a basic `Startup` class                                                 |
-| ac-app-use                   | Generates `app.Use()`                                                             |
-| ac-app-run                   | Generates `app.Run()`                                                             |
-| ac-app-map                   | Generates `app.Map()`                                                             |
-| ac-svc-adddbcontext          | Generates `AddDbContext()` with UseSqlServer in Startup.ConfigureService()        |
-| ac-svc-adddbcontext-inmemory | Generates `AddDbContext()` with UseInMemoryDatabase in Startup.ConfigureService() |
-| ac-svc-addmvc                | Generates `AddMvc()` with AddJsonOptions() in Startup.ConfigureService()          |
-| ac-svc-addspastaticfiles     | Generates `AddSpaStaticFiles()` in Startup.ConfigureService()                     |
-| ac-svc-addsingleton          | Generates `AddSingleton()` in Startup.ConfigureService()                          |
-| ac-use-spa                   | Generates `UseSpa()` in Startup.Configure()                                       |
-| ac-api-controller            | Generates an API Controller class                                                 |
-| ac-api-action                | Generates an API Action: GET                                                      |
-| ac-api-action-post           | Generates an API Action: POST                                                     |
-| ac-api-action-put            | Generates an API Action: PUT                                                      |
-| ac-api-action-delete         | Generates an API Action: DELETE                                                   |
-| ac-mvc-action                | Generates a MVC Action                                                            |
-| ac-mvc-action-async          | Generates a MVC Async Action                                                      |
+| Prefix                         | Description                                                                       |
+| ------------------------------ | --------------------------------------------------------------------------------- |
+| ac-program-cs                  | Generates a basic `Program` class                                                 |
+| ac-program-main                | Generates `Main()` method in `Program`                                            |
+| ac-program-main-full           | Generates `Main()` method in `Program` with full pipeline                         |
+| ac-startup                     | Generates a basic `Startup` class                                                 |
+| services-adddbcontext          | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()        |
+| services-adddbcontext-inmemory | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService() |
+| services-addmvc                | Generates `AddMvc()` with `AddJsonOptions()` in Startup.ConfigureService()             |
+| services-addspastaticfiles     | Generates `AddSpaStaticFiles()` in Startup.ConfigureService()                     |
+| services-addtransient          | Generates `AddTransient()` in Startup.ConfigureService()                          |
+| services-addscoped             | Generates `AddScoped()` in Startup.ConfigureService()                             |
+| services-addsingleton-1        | Generates `AddSingleton<T1, T2>()` in Startup.ConfigureService()                  |
+| services-addsingleton-2        | Generates `AddSingleton<T>(Instance)` in Startup.ConfigureService()               |
+| app-use                        | Generates `app.Use()`                                                             |
+| app-run                        | Generates `app.Run()`                                                             |
+| app-map                        | Generates `app.Map()`                                                             |
+| app-use-spa                    | Generates `UseSpa()` in Startup.Configure()                                       |
+| ac-api-controller              | Generates an API Controller class                                                 |
+| ac-api-action                  | Generates an API Action: GET                                                      |
+| ac-api-action-post             | Generates an API Action: POST                                                     |
+| ac-api-action-put              | Generates an API Action: PUT                                                      |
+| ac-api-action-delete           | Generates an API Action: DELETE                                                   |
+| ac-mvc-action                  | Generates a MVC Action                                                            |
+| ac-mvc-action-async            | Generates a MVC Async Action                                                      |
 
 ### Razor
 
