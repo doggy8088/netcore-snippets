@@ -351,12 +351,39 @@
         ],
         "description": "Startup: services.AddDbContext() with UseInMemoryDatabase in ConfigureServices() method"
     },
-    "service.AddMvc() with AddJsonOptions()": {
+    "service.AddMvc()": {
         "prefix": "services-addmvc",
+        "body": [
+            "services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);"
+        ],
+        "description": "Startup: services.AddMvc() on ConfigureServices()"
+    },
+    "service.AddMvc() with AddJsonOptions() with Converts": {
+        "prefix": "services-addmvc-json-converters",
         "body": [
             "services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
             "    .AddJsonOptions(opt => {",
             "        opt.SerializerSettings.Converters.Add(new ${1:Converter}());",
+            "    });"
+        ],
+        "description": "Startup: services.AddMvc() on ConfigureServices()"
+    },
+    "service.AddMvc() with AddJsonOptions() with DefaultContractResolver": {
+        "prefix": "services-addmvc-json-default",
+        "body": [
+            "services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
+            "    .AddJsonOptions(opt => {",
+            "        opt.SerializerSettings.ContractResolver = new DefaultContractResolver();",
+            "    });"
+        ],
+        "description": "Startup: services.AddMvc() on ConfigureServices()"
+    },
+    "service.AddMvc() with AddJsonOptions() with CamelCasePropertyNamesContractResolver": {
+        "prefix": "services-addmvc-json-camel",
+        "body": [
+            "services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
+            "    .AddJsonOptions(opt => {",
+            "        opt.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();",
             "    });"
         ],
         "description": "Startup: services.AddMvc() on ConfigureServices()"

@@ -40,7 +40,10 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | ac-startup                     | Generates a basic `Startup` class                                                 |
 | services-adddbcontext          | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()        |
 | services-adddbcontext-inmemory | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService() |
-| services-addmvc                | Generates `AddMvc()` with `AddJsonOptions()` in Startup.ConfigureService()             |
+| services-addmvc                | Generates `AddMvc()` in Startup.ConfigureService()                                        |
+| services-addmvc-json-default   | Generates `AddMvc()` with `AddJsonOptions()` using DefaultContractResolver                |
+| services-addmvc-json-camel     | Generates `AddMvc()` with `AddJsonOptions()` using CamelCasePropertyNamesContractResolver |
+| services-addmvc-json-converters| Generates `AddMvc()` with `AddJsonOptions()` using custom Converters                      |
 | services-addspastaticfiles     | Generates `AddSpaStaticFiles()` in Startup.ConfigureService()                     |
 | services-addtransient          | Generates `AddTransient()` in Startup.ConfigureService()                          |
 | services-addscoped             | Generates `AddScoped()` in Startup.ConfigureService()                             |
