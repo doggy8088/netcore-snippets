@@ -38,21 +38,26 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | ac-program-main                | Generates `Main()` method in `Program`                                            |
 | ac-program-main-full           | Generates `Main()` method in `Program` with full pipeline                         |
 | ac-startup                     | Generates a basic `Startup` class                                                 |
-| services-adddbcontext          | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()        |
-| services-adddbcontext-inmemory | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService() |
-| services-addmvc                | Generates `AddMvc()` in Startup.ConfigureService()                                        |
-| services-addmvc-json-default   | Generates `AddMvc()` with `AddJsonOptions()` using DefaultContractResolver                |
-| services-addmvc-json-camel     | Generates `AddMvc()` with `AddJsonOptions()` using CamelCasePropertyNamesContractResolver |
-| services-addmvc-json-converters| Generates `AddMvc()` with `AddJsonOptions()` using custom Converters                      |
-| services-addspastaticfiles     | Generates `AddSpaStaticFiles()` in Startup.ConfigureService()                     |
-| services-addtransient          | Generates `AddTransient()` in Startup.ConfigureService()                          |
-| services-addscoped             | Generates `AddScoped()` in Startup.ConfigureService()                             |
-| services-addsingleton-1        | Generates `AddSingleton<T1, T2>()` in Startup.ConfigureService()                  |
-| services-addsingleton-2        | Generates `AddSingleton<T>(Instance)` in Startup.ConfigureService()               |
+| services-add-dbcontext          | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()        |
+| services-add-dbcontext-inmemory | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService() |
+| services-add-mvc                | Generates `AddMvc()` in Startup.ConfigureService()                                        |
+| services-add-mvc-json-default   | Generates `AddMvc()` with `AddJsonOptions()` using DefaultContractResolver                |
+| services-add-mvc-json-camel     | Generates `AddMvc()` with `AddJsonOptions()` using CamelCasePropertyNamesContractResolver |
+| services-add-mvc-json-converters| Generates `AddMvc()` with `AddJsonOptions()` using custom Converters                      |
+| services-add-spastaticfiles     | Generates `AddSpaStaticFiles()` in Startup.ConfigureService()                     |
+| services-add-singleton-1        | Generates `AddSingleton<I, T>()` in Startup.ConfigureService()                  |
+| services-add-singleton-2        | Generates `AddSingleton<I>(T)` in Startup.ConfigureService()               |
+| services-add-singleton-3        | Generates `AddSingleton<I>(NewInstance)` in Startup.ConfigureService()               |
+| services-add-transient-1       | Generates `AddTransient<I, T>()` with Interface                                |
+| services-add-transient-2       | Generates `AddTransient<T, T>()` with Class                                     |
+| services-add-scoped            | Generates `AddScoped<I, T>()` in Startup.ConfigureService()                             |
 | app-use                        | Generates `app.Use()`                                                             |
 | app-run                        | Generates `app.Run()`                                                             |
 | app-map                        | Generates `app.Map()`                                                             |
 | app-use-spa                    | Generates `UseSpa()` in Startup.Configure()                                       |
+| app-use-staticfiles            | Generates app.UseStaticFiles() with sample code      |
+| app-use-defaultfiles           | Generates app.UseDefaultFiles() with sample code     |
+| app-use-directorybrowser       | Generates app.UseDirectoryBrowser() with sample code |
 | ac-api-controller              | Generates an API Controller class                                                 |
 | ac-api-action                  | Generates an API Action: GET                                                      |
 | ac-api-action-post             | Generates an API Action: POST                                                     |
@@ -60,6 +65,8 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | ac-api-action-delete           | Generates an API Action: DELETE                                                   |
 | ac-mvc-action                  | Generates a MVC Action                                                            |
 | ac-mvc-action-async            | Generates a MVC Async Action                                                      |
+| ac-middleware-1                | Generates Middleware class by convention             |
+| ac-middleware-2                | Generates Middleware class by using IMiddleware      |
 
 ### Razor
 
