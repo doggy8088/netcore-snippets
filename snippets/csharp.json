@@ -420,7 +420,7 @@
 	"service.AddSingleton<T>(new_instance)": {
 		"prefix": "services-add-singleton-3",
 		"body": [
-			"services.AddSingleton<I${1:Configuration}>(new ${2:${1}}($3);",
+			"services.AddSingleton<I${1:Configuration}>(new ${2:${1}}($3));",
 			"$0"
 		],
 		"description": "Startup: services.AddSingleton<I>(new T() "

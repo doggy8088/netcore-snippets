@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 0.2.1 - 2018-08-07
+
+* Fixed: `services-add-singleton-3`
+
 ## 0.2.0 - 2018-08-07
 
 * Fixed for `ac-program-main-full` snippet that removed some invalid code due to some Type are internal only.
