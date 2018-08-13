@@ -314,6 +314,7 @@
 	"service.AddDbContext-UseSqlServer": {
 		"prefix": "services-add-dbcontext",
 		"body": [
+			"// using Microsoft.EntityFrameworkCore;",
 			"services.AddDbContext<${1:ContextName}Context>(options =>",
 			"    options.UseSqlServer(Configuration.GetConnectionString(\"${2:DefaultConnection}\")));",
 			"$0"

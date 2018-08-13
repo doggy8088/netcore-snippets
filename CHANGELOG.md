@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 0.2.2 - 2018-08-14
+
+* Add "using Microsoft.EntityFrameworkCore;" hint in the `services-add-dbcontext` snippet.
+
 ## 0.2.1 - 2018-08-07
 
 * Fixed: `services-add-singleton-3`
