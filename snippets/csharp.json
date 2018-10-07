@@ -466,31 +466,6 @@
 		],
 		"description": "Startup: app.UseSpa()"
 	},
-	"GetConnectionString": {
-		"prefix": "nc-get-connstr",
-		"body": [
-			"// Remember add the following lines to your *.csproj file",
-			"// <ItemGroup>",
-			"//   <Content Update=\"appsettings.json\">",
-			"//     <CopyToOutputDirectory>Always</CopyToOutputDirectory>",
-			"//   </Content>",
-			"// </ItemGroup>",
-			"",
-			"var environmentName = Environment.GetEnvironmentVariable (\"ASPNETCORE_ENVIRONMENT\");",
-			"",
-			"var builder = new Microsoft.Extensions.Configuration.ConfigurationBuilder()",
-			"    .SetBasePath (AppContext.BaseDirectory)",
-			"    .AddJsonFile (\"appsettings.json\")",
-			"    .AddJsonFile ($\"appsettings.{environmentName}.json\", true)",
-			"    .AddEnvironmentVariables();",
-			"",
-			"var config = builder.Build();",
-			"",
-			"var ${2:connstr} = config.GetConnectionString (\"${1:DefaultConnection}\");",
-			"$0"
-		],
-		"description": "config.GetConnectionString()"
-	},
 	"ac-middleware-convention": {
 		"prefix": "ac-middleware-1",
 		"body": [
@@ -594,6 +569,31 @@
 			"});"
 		],
 		"description": "Generates app.UseDirectoryBrowser() with sample code"
+	},
+	"GetConnectionString": {
+		"prefix": "nc-get-connstr",
+		"body": [
+			"// Remember add the following lines to your *.csproj file",
+			"// <ItemGroup>",
+			"//   <Content Update=\"appsettings.json\">",
+			"//     <CopyToOutputDirectory>Always</CopyToOutputDirectory>",
+			"//   </Content>",
+			"// </ItemGroup>",
+			"",
+			"var environmentName = Environment.GetEnvironmentVariable (\"ASPNETCORE_ENVIRONMENT\");",
+			"",
+			"var builder = new Microsoft.Extensions.Configuration.ConfigurationBuilder()",
+			"    .SetBasePath (AppContext.BaseDirectory)",
+			"    .AddJsonFile (\"appsettings.json\")",
+			"    .AddJsonFile ($\"appsettings.{environmentName}.json\", true)",
+			"    .AddEnvironmentVariables();",
+			"",
+			"var config = builder.Build();",
+			"",
+			"var ${2:connstr} = config.GetConnectionString (\"${1:DefaultConnection}\");",
+			"$0"
+		],
+		"description": "config.GetConnectionString()"
 	}
 
 }

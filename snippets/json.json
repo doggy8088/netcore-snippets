@@ -46,24 +46,6 @@
 		],
 		"description": "ConnectionStrings for appsettings.json"
 	},
-	"ConnectionStrings-Trusted": {
-		"prefix": "ac-connstr-trusted",
-		"body": [
-			"\"ConnectionStrings\": {",
-			"  \"DefaultConnection\": \"Server=${1:(localdb)\\\\\\\\MSSQLLocalDB};Database=${2:DBName};Trusted_Connection=True;MultipleActiveResultSets=true\"",
-			"},$0"
-		],
-		"description": "ConnectionStrings for appsettings.json"
-	},
-	"ConnectionStrings-IP": {
-		"prefix": "ac-connstr-ip",
-		"body": [
-			"\"ConnectionStrings\": {",
-			"  \"DefaultConnection\": \"Server=${1:10.0.0.1};Database=${2:DBName};User Id=${3:LoginName};Password=${4:Password};;MultipleActiveResultSets=true\"",
-			"},$0"
-		],
-		"description": "ConnectionStrings for appsettings.json"
-	},
 	"ConnectionString-Trusted": {
 		"prefix": "connstr-trusted",
 		"body": [
