@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 0.2.4 - 2019-05-02
+
+* Updated `ac-api-controller` to use `ControllerBase` class [#1](https://github.com/doggy8088/netcore-snippets/pull/1)
+
 ## 0.2.3 - 2018-08-17
 
 * Removed `ac-connstr-trusted` and `ac-connstr-ip`.  Just use `connstr-trusted` and `connstr-ip` instead.
