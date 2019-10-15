@@ -41,22 +41,22 @@
 		"prefix": "connstr",
 		"body": [
 			"\"ConnectionStrings\": {",
-			"    $1",
-			"},$0"
+			"    $0",
+			"},"
 		],
 		"description": "ConnectionStrings for appsettings.json"
 	},
 	"ConnectionString-Trusted": {
 		"prefix": "connstr-trusted",
 		"body": [
-			"\"${1:DefaultConnection}\": \"Server=${2:(localdb)\\\\\\\\MSSQLLocalDB};Database=${3:DBName};Trusted_Connection=True;MultipleActiveResultSets=true\"$0",
+			"\"${1:DefaultConnection}\": \"Server=${2:(localdb)\\\\\\\\MSSQLLocalDB};Database=${3:DBName};Trusted_Connection=True;MultipleActiveResultSets=true\"$0"
 		],
 		"description": "ConnectionStrings for Trusted Connection"
 	},
 	"ConnectionString-IP": {
 		"prefix": "connstr-ip",
 		"body": [
-			"\"${1:DefaultConnection}\": \"Server=${2:10.0.0.1};Database=${3:DBName};User Id=${4:LoginName};Password=${5:Password};;MultipleActiveResultSets=true\"$0",
+			"\"${1:DefaultConnection}\": \"Server=${2:10.0.0.1};Database=${3:DBName};User Id=${4:LoginName};Password=${5:Password};;MultipleActiveResultSets=true\"$0"
 		],
 		"description": "ConnectionStrings for IP Connection"
 	}

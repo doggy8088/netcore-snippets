@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 0.2.5 - 2019-10-16
+
+* Updated `connstr` snippet that end focus on the center of the connection strings section.
+
 ## 0.2.4 - 2019-05-02
 
 * Updated `ac-api-controller` to use `ControllerBase` class [#1](https://github.com/doggy8088/netcore-snippets/pull/1)
