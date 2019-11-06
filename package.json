@@ -1,38 +1,51 @@
 {
-    "name": "netcore-snippets",
-    "displayName": "Essential ASP.NET Core Snippets",
-    "description": "High quality Code Snippets that boost your ASP.NET Core development productivity.",
-    "version": "0.2.6",
-    "publisher": "doggy8088",
-    "icon": "icon.png",
-    "repository": "https://github.com/doggy8088/netcore-snippets",
-    "engines": {
-        "vscode": "^1.20.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "extensionDependencies": [
-        "tintoy.msbuild-project-tools"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "csharp",
-                "path": "./snippets/csharp.json"
-            },
-            {
-                "language": "json",
-                "path": "./snippets/json.json"
-            },
-            {
-                "language": "msbuild",
-                "path": "./snippets/msbuild.json"
-            },
-            {
-                "language": "razor",
-                "path": "./snippets/razor.json"
-            }
-        ]
-    }
+  "name": "netcore-snippets",
+  "displayName": "Essential ASP.NET Core Snippets",
+  "description": "High quality Code Snippets that boost your ASP.NET Core development productivity.",
+  "version": "3.0.0",
+  "publisher": "doggy8088",
+  "icon": "icon.png",
+  "repository": "https://github.com/doggy8088/netcore-snippets",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "src/extension",
+  "license": "MIT",
+  "keywords": [
+    ".net-core",
+    "asp.net-core",
+    "code-snippets"
+  ],
+  "extensionDependencies": [
+    "tintoy.msbuild-project-tools"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "vsce:publish": "vsce publish",
+    "vsce:package": "vsce package",
+    "vsce:publish:patch": "vsce publish patch",
+    "vsce:publish:minor": "vsce publish minor",
+    "vsce:publish:major": "vsce publish major"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.39.0",
+    "@types/node": "^10.16.3",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3",
+    "vsce": "^1.66.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+          "language": "csharp",
+          "path": "./snippets/csharp.json"
+      }
+    ]
+  }
 }

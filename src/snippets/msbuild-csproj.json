@@ -1,0 +1,20 @@
+{
+	"ASP.NET Core 3.0 csproj": {
+		"prefix": "anc3-default",
+		"body": [
+			"<Project Sdk=\"Microsoft.NET.Sdk.Web\">",
+			"",
+			"  <PropertyGroup>",
+			"    <TargetFramework>netcoreapp3.0</TargetFramework>",
+			"  </PropertyGroup>",
+			"",
+			"  <ItemGroup>",
+			"    $0",
+			"  </ItemGroup>",
+			"",
+			"</Project>",
+			""
+		],
+		"description": "ASP.NET Core 3.0 Default MSBuild file (csproj)"
+	}
+}

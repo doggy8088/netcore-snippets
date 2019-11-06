@@ -2,7 +2,12 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
-## 0.2.6 - 2019-10-16
+## 3.0.0 - 2019-10-17
+
+* Most of the snippets are now triggered only in specific languages and filename.
+* Updated some snippets for ASP.NET Core 3.0
+
+## 0.2.7 - 2019-10-17
 
 * Updated `ac-api-controller` snippet for better API developer experience.
 

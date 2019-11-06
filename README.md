@@ -1,6 +1,6 @@
 # Essential ASP.NET Core Snippets
 
-This extension is optimized for developers who wants to develop ASP.NET Core 2 and Entity Framework Core 2.  These code snippets contains **C#**, **MSBuild**, **Razor** and **JSON** snippets.  So you can even write your own `appsettings.json` using my code snippets in a rocket speed.
+This extension is optimized for developers who wants to develop ASP.NET Core 2/3 and Entity Framework Core 2/3.  These code snippets contains **C#**, **MSBuild**, **Razor** and **JSON** snippets.  So you can even write your own `appsettings.json` using my code snippets in a rocket speed.
 
 This extension is still in progress.  [Let me know](https://github.com/doggy8088/netcore-snippets/issues) if you have any suggestion! Thanks!
 
@@ -17,6 +17,7 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 | Prefix    | Description                           |
 | --------- | ------------------------------------- |
+| anc3-     | ASP.NET Core 3 Snippets               |
 | ac-       | ASP.NET Core Snippets                 |
 | services- | ASP.NET Core Snippets in `Startup.cs` |
 | app-      | ASP.NET Core Snippets in `Startup.cs` |
@@ -26,15 +27,15 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### MSBuild (`.csproj`)
 
-| Prefix    | Description                                   |
-| --------- | --------------------------------------------- |
-| ac-csproj | Generates Default ASP.NET Core 2 MSBuild file |
+| Prefix       | Description                                   |
+| ------------ | --------------------------------------------- |
+| anc3-default | Generates Default ASP.NET Core 3 MSBuild file |
 
 ### C\#
 
 | Prefix                           | Description                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------------- |
-| ac-program-cs                    | Generates a basic `Program` class                                                         |
+| anc3-program-cs                  | Generates a basic `Program` class for ASP.NET Core 3.0                                                        |
 | ac-program-main                  | Generates `Main()` method in `Program`                                                    |
 | ac-program-main-full             | Generates `Main()` method in `Program` with full pipeline                                 |
 | ac-startup                       | Generates a basic `Startup` class                                                         |

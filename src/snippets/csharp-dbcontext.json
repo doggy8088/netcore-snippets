@@ -1,0 +1,16 @@
+{
+	"DbContext": {
+		"prefix": "ef-dbcontext",
+		"body": [
+			"using Microsoft.EntityFrameworkCore;",
+			"",
+			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models {",
+			"    public class ${2:${TM_FILENAME_BASE}} : DbContext {",
+			"        public ${2} (DbContextOptions<${2}> options) : base (options) { }",
+			"        public DbSet<${3:EntityName}> ${4:${3}s}$0 { get; set; }",
+			"    }",
+			"}"
+		],
+		"description": "Create a DbContext class under Models/ folder"
+	}
+}

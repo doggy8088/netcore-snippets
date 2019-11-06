@@ -1,0 +1,297 @@
+{
+	"Startup.cs": {
+		"prefix": "ac-startup",
+		"body": [
+			"using System;",
+			"using System.Collections.Generic;",
+			"using System.Linq;",
+			"using System.Threading.Tasks;",
+			"using Microsoft.AspNetCore.Builder;",
+			"using Microsoft.AspNetCore.Hosting;",
+			"using Microsoft.AspNetCore.HttpsPolicy;",
+			"using Microsoft.AspNetCore.Mvc;",
+			"using Microsoft.Extensions.Configuration;",
+			"using Microsoft.Extensions.DependencyInjection;",
+			"using Microsoft.Extensions.Logging;",
+			"using Microsoft.Extensions.Options;",
+			"",
+			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\\\/]+)$/$1/}}",
+			"{",
+			"    public class Startup",
+			"    {",
+			"        public Startup(IConfiguration configuration)",
+			"        {",
+			"            Configuration = configuration;",
+			"        }",
+			"",
+			"        public IConfiguration Configuration { get; }",
+			"",
+			"        // This method gets called by the runtime. Use this method to add services to the container.",
+			"        public void ConfigureServices(IServiceCollection services)",
+			"        {",
+			"            $0",
+			"            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);",
+			"        }",
+			"",
+			"        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.",
+			"        public void Configure(IApplicationBuilder app, IHostingEnvironment env)",
+			"        {",
+			"            if (env.IsDevelopment())",
+			"            {",
+			"                app.UseDeveloperExceptionPage();",
+			"            }",
+			"            else",
+			"            {",
+			"                app.UseHsts();",
+			"            }",
+			"",
+			"            // app.UseHttpsRedirection();",
+			"            app.UseMvc();",
+			"        }",
+			"    }",
+			"}",
+			""
+		],
+		"description": "Snippet Description"
+	},
+	"service.AddDbContext-UseSqlServer": {
+		"prefix": "services-add-dbcontext",
+		"body": [
+			"// using Microsoft.EntityFrameworkCore;",
+			"services.AddDbContext<${1:ContextName}Context>(options =>",
+			"    options.UseSqlServer(Configuration.GetConnectionString(\"${2:DefaultConnection}\")));",
+			"$0"
+		],
+		"description": "Startup: services.AddDbContext() with UseSqlServer in ConfigureServices() method"
+	},
+	"service.AddDbContext-UseSqlite": {
+		"prefix": "services-add-dbcontext-sqlite",
+		"body": [
+			"// using Microsoft.EntityFrameworkCore;",
+			"services.AddDbContext<${1:ContextName}Context>(options =>",
+			"    options.UseSqlite(\"Data Source=${2:Database}.db\")));",
+			"$0"
+		],
+		"description": "Startup: services.AddDbContext() with UseSqlite in ConfigureServices() method"
+	},
+	"service.AddDbContext-UseInMemoryDatabase": {
+		"prefix": "services-add-dbcontext-inmemory",
+		"body": [
+			"services.AddDbContext<${1:ContextName}Context>(options =>",
+			"    options.UseInMemoryDatabase(\"${2:name}\"));",
+			"$0"
+		],
+		"description": "Startup: services.AddDbContext() with UseInMemoryDatabase in ConfigureServices() method"
+	},
+	"service.AddMvc()": {
+		"prefix": "services-add-mvc",
+		"body": [
+			"services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);"
+		],
+		"description": "Startup: services.AddMvc() on ConfigureServices()"
+	},
+	"service.AddMvc() with AddJsonOptions() with Converts": {
+		"prefix": "services-add-mvc-json-converters",
+		"body": [
+			"services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
+			"    .AddJsonOptions(opt => {",
+			"        opt.SerializerSettings.Converters.Add(new ${1:Converter}());",
+			"    });"
+		],
+		"description": "Startup: services.AddMvc() on ConfigureServices()"
+	},
+	"service.AddMvc() with AddJsonOptions() with DefaultContractResolver": {
+		"prefix": "services-add-mvc-json-default",
+		"body": [
+			"services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
+			"    .AddJsonOptions(opt => {",
+			"        opt.SerializerSettings.ContractResolver = new DefaultContractResolver();",
+			"    });"
+		],
+		"description": "Startup: services.AddMvc() on ConfigureServices()"
+	},
+	"service.AddMvc() with AddJsonOptions() with CamelCasePropertyNamesContractResolver": {
+		"prefix": "services-add-mvc-json-camel",
+		"body": [
+			"services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
+			"    .AddJsonOptions(opt => {",
+			"        opt.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();",
+			"    });"
+		],
+		"description": "Startup: services.AddMvc() on ConfigureServices()"
+	},
+	"services.AddSpaStaticFiles()": {
+		"prefix": "services-add-spastaticfiles",
+		"body": [
+			"// In production, the Angular files will be served from this directory",
+			"services.AddSpaStaticFiles(configuration =>",
+			"{",
+			"    configuration.RootPath = \"ClientApp/dist\";",
+			"});"
+		],
+		"description": "Startup: services.AddSpaStaticFiles()"
+	},
+	"service.AddTransient() with Interface": {
+		"prefix": "services-add-transient-1",
+		"body": [
+			"services.AddTransient<I${1:TypeName}, ${2:${1}}>();",
+			"$0"
+		],
+		"description": "Startup: services.AddTransient<I, T>()"
+	},
+	"service.AddTransient() with Class": {
+		"prefix": "services-add-transient-2",
+		"body": [
+			"services.AddTransient<${1:TypeName}, ${2:${1}}>();",
+			"$0"
+		],
+		"description": "Startup: services.AddTransient<T, T>()"
+	},
+	"service.AddScoped()": {
+		"prefix": "services-add-scoped",
+		"body": [
+			"services.AddScoped<I${1:TypeName}, ${2:${1}}>();",
+			"$0"
+		],
+		"description": "Startup: services.AddScoped<I, T>()"
+	},
+	"service.AddSingleton()": {
+		"prefix": "services-add-singleton-1",
+		"body": [
+			"services.AddSingleton<I${1:TypeName}, ${2:${1}}>();",
+			"$0"
+		],
+		"description": "Startup: services.AddSingleton<I, T>()"
+	},
+	"service.AddSingleton<T>(instance)": {
+		"prefix": "services-add-singleton-2",
+		"body": [
+			"services.AddSingleton<I${1:Configuration}>(${2:${1}});",
+			"$0"
+		],
+		"description": "Startup: services.AddSingleton<I>(T)"
+	},
+	"service.AddSingleton<T>(new_instance)": {
+		"prefix": "services-add-singleton-3",
+		"body": [
+			"services.AddSingleton<I${1:Configuration}>(new ${2:${1}}($3));",
+			"$0"
+		],
+		"description": "Startup: services.AddSingleton<I>(new T() "
+	},
+	"service.AddSingleton<T>(FactoryMethod)": {
+		"prefix": "services-add-singleton-4",
+		"body": [
+			"services.AddSingleton<I${1:Configuration}>((sp) => {",
+			"    $0",
+			"    return new ${2:${1}}($3);",
+			"});"
+		],
+		"description": "Startup: services.AddSingleton<I>(new T() "
+	},
+	"app.UseSpa": {
+		"prefix": "app-use-spa",
+		"body": [
+			"app.UseSpa(spa =>",
+			"{",
+			"    // To learn more about options for serving an Angular SPA from ASP.NET Core,",
+			"    // see https://go.microsoft.com/fwlink/?linkid=864501",
+			"",
+			"    spa.Options.SourcePath = \"ClientApp\";",
+			"",
+			"    // https://docs.microsoft.com/en-us/aspnet/core/spa/angular?view=aspnetcore-2.1&tabs=visual-studio#server-side-rendering",
+			"    // https://github.com/maciejtreder/ng-toolkit/tree/master/schematics/universal",
+			"    spa.UseSpaPrerendering(options =>",
+			"    {",
+			"        options.BootModulePath = \\$\"{spa.Options.SourcePath}/dist-server/main.bundle.js\";",
+			"        options.BootModuleBuilder = env.IsDevelopment()",
+			"            ? new AngularCliBuilder(npmScript: \"build:prod\")",
+			"            : null;",
+			"        options.ExcludeUrls = new[] { \"/sockjs-node\" };",
+			"    });",
+			"",
+			"    if (env.IsDevelopment())",
+			"    {",
+			"        spa.UseAngularCliServer(npmScript: \"start\");",
+			"        //spa.UseProxyToSpaDevelopmentServer(\"http://localhost:4200\");",
+			"    }",
+			"});"
+		],
+		"description": "Startup: app.UseSpa()"
+	},
+	"app.UseDefaultFiles": {
+		"prefix": "app-use-defaultfiles",
+		"body": [
+			"DefaultFilesOptions dfOptions = new DefaultFilesOptions();",
+			"dfOptions.DefaultFileNames.Clear();",
+			"dfOptions.DefaultFileNames.Add(\"${1:mydefault}.html\");",
+			"app.UseDefaultFiles(dfOptions);",
+			"$0"
+		],
+		"description": "Generates app.UseDefaultFiles() with sample code"
+	},
+	"app.UseStaticFiles": {
+		"prefix": "app-use-staticfiles",
+		"body": [
+			"app.UseStaticFiles(new StaticFileOptions",
+			"{",
+			"    // Requires the following import:",
+			"    // ${0}using System.IO;",
+			"    // using Microsoft.Extensions.FileProviders;",
+			"    FileProvider = new PhysicalFileProvider(",
+			"            Path.Combine(Directory.GetCurrentDirectory(), \"wwwroot\", \"${1:images}\")),",
+			"    RequestPath = \"/${2:MyImages}\",",
+			"        ",
+			"    OnPrepareResponse = ctx =>",
+			"    {",
+			"        ctx.Context.Response.Headers.Append(\"Cache-Control\", \"public,max-age=${3:600}\");",
+			"    }",
+			"});"
+		],
+		"description": "Generates app.UseStaticFiles() with sample code"
+	},
+	"app.UseDirectoryBrowser": {
+		"prefix": "app-use-directorybrowser",
+		"body": [
+			"app.UseDirectoryBrowser(new DirectoryBrowserOptions",
+			"{",
+			"    // Requires the following import:",
+			"    // ${0}using System.IO;",
+			"    // using Microsoft.Extensions.FileProviders;",
+			"    FileProvider = new PhysicalFileProvider(",
+			"            Path.Combine(Directory.GetCurrentDirectory(), \"wwwroot\", \"${1:images}\")),",
+			"        RequestPath = \"/${2:MyImages}\"",
+			"});"
+		],
+		"description": "Generates app.UseDirectoryBrowser() with sample code"
+	},
+	"app.Use": {
+		"prefix": "app-use",
+		"body": [
+			"${1:app}.Use(async (context, next) => {",
+			"    await context.Response.WriteAsync(\"$0${2:text}\");",
+			"    await next();",
+			"});"
+		],
+		"description": "Create app.Use() usage"
+	},
+	"app.Run": {
+		"prefix": "app-run",
+		"body": [
+			"${1:app}.Run(async (context) => {",
+			"    await context.Response.WriteAsync(\"$0${2:text}\");",
+			"});"
+		],
+		"description": "Create app.Use() usage"
+	},
+	"app.Map": {
+		"prefix": "app-map",
+		"body": [
+			"${1:app}.Map(\"/${2:path}\", (app1) =>",
+			"{",
+			"    $0",
+			"});"
+		],
+		"description": "Create app.Use() usage"
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"ac-middleware-convention": {
+		"prefix": "middleware-1",
+		"body": [
+			"using System;",
+			"using System.Threading.Tasks;",
+			"using Microsoft.AspNetCore.Http;",
+			"",
+			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\\\/]+)$/$1/}}.Middleware",
+			"{",
+			"    public class ${2:CustomName}Middleware",
+			"    {",
+			"        private readonly RequestDelegate _next;",
+			"",
+			"        // \"Scoped\" SERVICE SHOULDN'T DO CONSTRUCTOR DI!!",
+			"        public ${2}Middleware(RequestDelegate next)",
+			"        {",
+			"            _next = next;",
+			"        }",
+			"",
+			"        public async Task InvokeAsync(HttpContext context)",
+			"        {",
+			"            $0",
+			"            await _next(context);",
+			"        }",
+			"    }",
+			"}",
+			""
+		],
+		"description": "implement Middleware by convention"
+	},
+	"ac-middleware-interface": {
+		"prefix": "middleware-2",
+		"body": [
+			"using System;",
+			"using System.Threading.Tasks;",
+			"using Microsoft.AspNetCore.Http;",
+			"",
+			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\\\/]+)$/$1/}}.Middleware",
+			"{",
+			"    public class IMiddlewareMiddleware : IMiddleware",
+			"    {",
+			"        // IMiddleware is activated per request, ",
+			"        // so scoped services can be injected into the middleware's constructor.",
+			"        public IMiddlewareMiddleware()",
+			"        {",
+			"        }",
+			"",
+			"        public async Task InvokeAsync(HttpContext context, RequestDelegate next)",
+			"        {",
+			"            $0",
+			"            await next(context);",
+			"        }",
+			"    }",
+			"}",
+			""
+		],
+		"description": "implement Middleware by using IMiddleware"
+	}
+}
