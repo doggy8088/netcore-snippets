@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.1.0 - 2019-12-04
+
+* Add `connstr-sqlite` snippet
+
 ## 3.0.0 - 2019-12-02
 
 * Most of the snippets are now triggered only in specific languages and filename.

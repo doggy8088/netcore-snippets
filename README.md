@@ -138,6 +138,7 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | connstr         | Generates a `ConnectionStrings` section with Trusted_Connection |
 | connstr-trusted | Generates a `ConnectionStrings` item with Trusted_Connection    |
 | connstr-ip      | Generates a `ConnectionStrings` item with IP_Connection         |
+| connstr-sqlite  | Generates a `ConnectionStrings` item with SQLite connection     |
 
 ## Entity Framework Core Snippets
 

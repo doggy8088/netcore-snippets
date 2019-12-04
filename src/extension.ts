@@ -80,7 +80,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     context.subscriptions.push(registerCompletionItemProvider(readAllText('json-appsettings.json'), {
         language: 'json',
-        pattern: '**/appsettings.json',
+        pattern: '**/appsettings*.json',
         scheme: 'file',
     }));
 
