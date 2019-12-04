@@ -1,4 +1,4 @@
-# Essential ASP.NET Core Snippets
+# Essential ASP.NET Core 3 Snippets
 
 This extension is optimized for developers who wants to develop ASP.NET Core 2/3 and Entity Framework Core 2/3.  These code snippets contains **C#**, **MSBuild**, **Razor** and **JSON** snippets.  So you can even write your own `appsettings.json` using my code snippets in a rocket speed.
 
@@ -17,8 +17,9 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 | Prefix    | Description                           |
 | --------- | ------------------------------------- |
+| nc-       | General .NET Core Snippets            |
+| ac-       | General ASP.NET Core Snippets         |
 | anc3-     | ASP.NET Core 3 Snippets               |
-| ac-       | ASP.NET Core Snippets                 |
 | services- | ASP.NET Core Snippets in `Startup.cs` |
 | app-      | ASP.NET Core Snippets in `Startup.cs` |
 | ef-       | Entity Framework Core Snippets        |
@@ -35,10 +36,9 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 | Prefix                           | Description                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------------- |
-| anc3-program-cs                  | Generates a basic `Program` class for ASP.NET Core 3.0                                                        |
-| ac-program-main                  | Generates `Main()` method in `Program`                                                    |
-| ac-program-main-full             | Generates `Main()` method in `Program` with full pipeline                                 |
-| ac-startup                       | Generates a basic `Startup` class                                                         |
+| anc3-program-cs                  | Generates basic `Program` class for ASP.NET Core 3                                        |
+| anc3-startup-mvc                 | Generates ASP․NET Core MVC `Startup` class                                                |
+| anc3-startup-api                 | Generates ASP․NET Core Web API `Startup` class                                            |
 | services-add-dbcontext           | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()            |
 | services-add-dbcontext-inmemory  | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService()     |
 | services-add-mvc                 | Generates `AddMvc()` in Startup.ConfigureService()                                        |
@@ -143,9 +143,10 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### C\#
 
-| Prefix       | Description                       |
-| ------------ | --------------------------------- |
-| ef-dbcontext | Generates an API Controller class |
+| Prefix               | Description                                                              |
+| -------------------- | ------------------------------------------------------------------------ |
+| ef-dbcontext         | Generates an DbContext class for Entity Framework Core                   |
+| ef-dbcontext-factory | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
 
 ### JSON
 

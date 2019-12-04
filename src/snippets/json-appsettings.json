@@ -59,5 +59,12 @@
 			"\"${1:DefaultConnection}\": \"Server=${2:10.0.0.1};Database=${3:DBName};User Id=${4:LoginName};Password=${5:Password};;MultipleActiveResultSets=true\"$0"
 		],
 		"description": "ConnectionStrings for IP Connection"
+	},
+	"ConnectionString-SQLite": {
+		"prefix": "connstr-sqlite",
+		"body": [
+			"\"${1:DefaultConnection}\": \"Data Source=${2:Database}.db\"$0"
+		],
+		"description": "ConnectionStrings for IP Connection"
 	}
 }

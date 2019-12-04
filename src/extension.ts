@@ -48,6 +48,12 @@ export function activate(context: vscode.ExtensionContext) {
         scheme: 'file',
     }));
 
+    context.subscriptions.push(registerCompletionItemProvider(readAllText('csharp-dbcontext-factory.json'), {
+        language: 'csharp',
+        pattern: '**/*ContextFactory.cs',
+        scheme: 'file',
+    }));
+
     context.subscriptions.push(registerCompletionItemProvider(readAllText('csharp-dbcontext.json'), {
         language: 'csharp',
         pattern: '**/*Entities.cs',

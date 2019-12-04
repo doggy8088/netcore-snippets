@@ -1,0 +1,25 @@
+{
+	"IDesignTimeDbContextFactory": {
+		"prefix": "ef-dbcontext-factory",
+		"body": [
+			"using Microsoft.EntityFrameworkCore;",
+			"using Microsoft.EntityFrameworkCore.Design;",
+			"using Microsoft.EntityFrameworkCore.Infrastructure;",
+			"",
+			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models",
+			"{",
+			"    public class ${2:${TM_FILENAME_BASE}} : IDesignTimeDbContextFactory<${2/(Factory)$//g}>",
+			"    {",
+			"        public ${2/^(.*)(Factory)$/$1/} CreateDbContext(string[] args)",
+			"        {",
+			"            var optionsBuilder = new DbContextOptionsBuilder<${2/^(.*)(Factory)$/$1/}>();",
+			"            optionsBuilder.UseSqlServer(\"Server=(localdb)\\\\\\\\MSSQLLocalDB;Database=${3:DBName};Trusted_Connection=True;MultipleActiveResultSets=true\");",
+			"",
+			"            return new ${2/^(.*)(Factory)$/$1/}(optionsBuilder.Options);",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "Create a IDesignTimeDbContextFactory class under Models/ folder"
+	}
+}
