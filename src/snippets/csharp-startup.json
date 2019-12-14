@@ -120,6 +120,22 @@
 		],
 		"description": "Create a Startup class in Startup.cs"
 	},
+	"service.AddCors": {
+		"prefix": "services-add-cors",
+		"body": [
+			"services.AddCors(options =>",
+			"{",
+			"    options.AddDefaultPolicy(builder =>",
+			"    {",
+			"        builder.WithOrigins(\"${1|http,https|}://${2:localhost:5000}\")",
+			"            .AllowAnyHeader()",
+			"            .AllowAnyMethod();",
+			"    });",
+			"});",
+			"$0"
+		],
+		"description": "service.AddCors"
+	},
 	"service.AddDbContext-UseSqlServer": {
 		"prefix": "services-add-dbcontext",
 		"body": [

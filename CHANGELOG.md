@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.1.1 - 2019-12-14
+
+* Add `services-add-cors` snippet
+
 ## 3.1.0 - 2019-12-04
 
 * Add `connstr-sqlite` snippet
