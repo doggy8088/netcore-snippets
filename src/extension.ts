@@ -36,9 +36,15 @@ const registerCompletionItemProvider = (obj: any, selector: vscode.DocumentSelec
 
 export function activate(context: vscode.ExtensionContext) {
 
-    context.subscriptions.push(registerCompletionItemProvider(readAllText('csharp-controller.json'), {
+    context.subscriptions.push(registerCompletionItemProvider(readAllText('csharp-controllers.json'), {
         language: 'csharp',
         pattern: '**/*Controller.cs',
+        scheme: 'file',
+    }));
+
+    context.subscriptions.push(registerCompletionItemProvider(readAllText('csharp-hubs.json'), {
+        language: 'csharp',
+        pattern: '**/*Hub.cs',
         scheme: 'file',
     }));
 

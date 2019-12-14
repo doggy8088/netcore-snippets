@@ -1,0 +1,21 @@
+{
+    "SignalR Chat app sample": {
+      "prefix": "signalr-chat",
+      "body": [
+        "using Microsoft.AspNetCore.SignalR;",
+        "using System.Threading.Tasks;",
+        "",
+        "namespace ${1:${TM_DIRECTORY/^.*[\\\\\\\\\\\\/]([^\\\\\\\\\\\\/]+)[\\\\\\\\\\\\/][^\\\\\\\\\\\\/]+$/$1/}}.Hubs",
+        "{",
+        "    public class ${2:Chat}Hub : Hub",
+        "    {",
+        "        public async Task SendMessage(string user, string message)",
+        "        {",
+        "            await Clients.All.SendAsync(\"ReceiveMessage\", user, message);$0",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "description": "SignalR Chat app sample"
+    }
+}

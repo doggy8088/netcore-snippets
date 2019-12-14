@@ -23,6 +23,7 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | services- | ASP.NET Core Snippets in `Startup.cs` |
 | app-      | ASP.NET Core Snippets in `Startup.cs` |
 | ef-       | Entity Framework Core Snippets        |
+| signalr-  | ASP.NET Core SignalR Snippets         |
 
 ## ASP.NET Core Snippets
 
@@ -37,8 +38,8 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | Prefix                           | Description                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------------- |
 | anc3-program-cs                  | Generates basic `Program` class for ASP.NET Core 3                                        |
-| anc3-startup-mvc                 | Generates ASP․NET Core MVC `Startup` class                                                |
-| anc3-startup-api                 | Generates ASP․NET Core Web API `Startup` class                                            |
+| anc3-startup-mvc                 | Generates ASP.NET Core MVC `Startup` class                                                |
+| anc3-startup-api                 | Generates ASP.NET Core Web API `Startup` class                                            |
 | services-add-cors                | Generates `AddCors()` in Startup.ConfigureService()            |
 | services-add-dbcontext           | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()            |
 | services-add-dbcontext-inmemory  | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService()     |
@@ -69,6 +70,7 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | ac-mvc-action-async              | Generates a MVC Async Action                                                              |
 | ac-middleware-1                  | Generates Middleware class by convention                                                  |
 | ac-middleware-2                  | Generates Middleware class by using IMiddleware                                           |
+| signalr-chat                     | Generates SignalR ChatHub sample code                                                     |
 
 ### Razor
 
