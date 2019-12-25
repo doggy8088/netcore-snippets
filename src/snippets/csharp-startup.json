@@ -272,6 +272,59 @@
 		],
 		"description": "Startup: services.AddSingleton<I>(new T() "
 	},
+	"service.AddAuthentication().AddCookie()": {
+		"prefix": "services-add-auth-cookie",
+		"body": [
+			"// using Microsoft.AspNetCore.Authentication.Cookies;",
+			"services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)",
+			"    .AddCookie(options =>",
+			"    {",
+			"        // using Microsoft.AspNetCore.Http;",
+			"        options.LoginPath = new PathString(\"/Account/Login\");",
+			"        options.LogoutPath = new PathString(\"/Account/Logout\");",
+			"        options.AccessDeniedPath = new PathString(\"/Account/AccessDenied\");",
+			"",
+			"        options.ReturnUrlParameter = \"ReturnUrl\";",
+			"",
+			"        // https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie?view=aspnetcore-3.1#react-to-back-end-changes                    ",
+			"        // options.EventsType = typeof(CustomCookieAuthenticationEvents);",
+			"    });"
+		],
+		"description": "service.AddAuthentication().AddCookie()"
+	},
+	"service.AddAuthentication().AddJwtBearer()": {
+		"prefix": "services-add-auth-jwt",
+		"body": [
+			"services",
+			"    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)",
+			"    .AddJwtBearer(options =>",
+			"    {",
+			"        options.IncludeErrorDetails = true; // Default: true",
+			"",
+			"        options.TokenValidationParameters = new TokenValidationParameters",
+			"        {",
+			"            // Let \"sub\" assign to User.Identity.Name",
+			"            NameClaimType = \"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\",",
+			"            // Let \"roles\" assign to Roles for [Authorized] attributes",
+			"            RoleClaimType = \"http://schemas.microsoft.com/ws/2008/06/identity/claims/role\",",
+			"",
+			"            // Validate the Issuer",
+			"            ValidateIssuer = true,",
+			"            ValidIssuer = Configuration.GetValue<string>(\"JwtSettings:Issuer\"),",
+			"",
+			"            ValidateAudience = false,",
+			"            //ValidAudience = \"JwtAuthDemo\", // TODO",
+			"",
+			"            ValidateLifetime = true,",
+			"",
+			"            ValidateIssuerSigningKey = false,",
+			"",
+			"            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<string>(\"JwtSettings:SignKey\")))",
+			"        };",
+			"    });"
+		],
+		"description": "service.AddAuthentication().AddJwtBearer()"
+	},
 	"app.UseSpa": {
 		"prefix": "app-use-spa",
 		"body": [

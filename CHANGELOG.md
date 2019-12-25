@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.1.4 - 2019-12-25
+
+* Add `services-add-auth-cookie` and `services-add-auth-jwt` snippets
+
 ## 3.1.3 - 2019-12-15
 
 * Add `signalr-chat` snippet

@@ -40,9 +40,11 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | anc3-program-cs                  | Generates basic `Program` class for ASP.NET Core 3                                        |
 | anc3-startup-mvc                 | Generates ASP.NET Core MVC `Startup` class                                                |
 | anc3-startup-api                 | Generates ASP.NET Core Web API `Startup` class                                            |
-| services-add-cors                | Generates `AddCors()` in Startup.ConfigureService()            |
-| services-add-dbcontext           | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()            |
-| services-add-dbcontext-inmemory  | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService()     |
+| services-add-cors                | Generates `AddCors()` in Startup.ConfigureService()                                       |
+| services-add-dbcontext           | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()           |
+| services-add-dbcontext-inmemory  | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService()    |
+| services-add-auth-cookie         | Generates `AddAuthentication().AddCookie()` in Startup.ConfigureService()                 |
+| services-add-auth-jwt            | Generates `AddAuthentication().AddJwtBearer()` in Startup.ConfigureService()              |
 | services-add-mvc                 | Generates `AddMvc()` in Startup.ConfigureService()                                        |
 | services-add-mvc-json-default    | Generates `AddMvc()` with `AddJsonOptions()` using DefaultContractResolver                |
 | services-add-mvc-json-camel      | Generates `AddMvc()` with `AddJsonOptions()` using CamelCasePropertyNamesContractResolver |
