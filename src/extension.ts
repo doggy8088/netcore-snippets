@@ -90,11 +90,12 @@ export function activate(context: vscode.ExtensionContext) {
         scheme: 'file',
     }));
 
-    context.subscriptions.push(registerCompletionItemProvider(readAllText('msbuild-csproj.json'), {
-        language: 'msbuild',
-        pattern: '**/*.csproj',
-        scheme: 'file',
-    }));
+    // It's not working. Don't know why?
+    // context.subscriptions.push(registerCompletionItemProvider(readAllText('msbuild-csproj.json'), {
+    //     language: 'msbuild',
+    //     pattern: '**/*.csproj',
+    //     scheme: 'file',
+    // }));
 
     context.subscriptions.push(registerCompletionItemProvider(readAllText('razor-cshtml.json'), {
         language: 'razor',
