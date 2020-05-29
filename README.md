@@ -32,6 +32,7 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | Prefix       | Description                                   |
 | ------------ | --------------------------------------------- |
 | anc3-default | Generates Default ASP.NET Core 3 MSBuild file |
+| protobuf     | Add Protobuf item within a ItemGroup (csproj) |
 
 ### C\#
 
@@ -73,6 +74,13 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | ac-middleware-1                  | Generates Middleware class by convention                                                  |
 | ac-middleware-2                  | Generates Middleware class by using IMiddleware                                           |
 | signalr-chat                     | Generates SignalR ChatHub sample code                                                     |
+| grpc-channel                     | Generate GrpcChannel.ForAddress()                                                         |
+
+### Proto3 (gRPC)
+
+| Prefix                     | Description                                                                   |
+| -------------------------- | ----------------------------------------------------------------------------- |
+| protobuf                   | Generates a sample protobuf file                                              |
 
 ### Razor
 

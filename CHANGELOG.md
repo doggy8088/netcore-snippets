@@ -2,6 +2,12 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.2.0 - 2020-05-29
+
+* Add `protobuf` snippets (`proto3`)
+* Add `protobuf` snippets (`msbuild`)
+* Add `grpc-channel` snippets (`csharp`)
+
 ## 3.1.4 - 2019-12-25
 
 * Add `services-add-auth-cookie` and `services-add-auth-jwt` snippets

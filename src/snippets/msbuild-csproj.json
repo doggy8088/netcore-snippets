@@ -16,5 +16,16 @@
 			""
 		],
 		"description": "ASP.NET Core 3.0 Default MSBuild file (csproj)"
+	},
+	"Protobuf": {
+		"prefix": "protobuf",
+		"body": [
+			"<ItemGroup>",
+			"  <Protobuf Include=\"${1:Protos/greet.proto}\" GrpcServices=\"${2|Client,Server|}\" />",
+			"</ItemGroup>",
+			"$0",
+			""
+		],
+		"description": "Add Protobuf item within a ItemGroup (csproj)"
 	}
 }
