@@ -75,6 +75,7 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | ac-middleware-2                  | Generates Middleware class by using IMiddleware                                           |
 | signalr-chat                     | Generates SignalR ChatHub sample code                                                     |
 | grpc-channel                     | Generate GrpcChannel.ForAddress()                                                         |
+| jwt-helpers                      | Generate JwtHelpers class                                                                 |
 
 ### Proto3 (gRPC)
 
@@ -173,5 +174,15 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 ## Contributing
 
 If you need any ASP.NET Core / Entity Framework Core snippets, please feel free to send PRs to me or simply [drop me a note](https://github.com/doggy8088/netcore-snippets/issues)! 😊
+
+## Build & Test
+
+```sh
+npm run build
+```
+
+Just hit `F5` in the Visual Studio Code.
+
+---
 
 **Enjoy!**
