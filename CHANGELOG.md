@@ -2,7 +2,7 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
-## 3.2.1 - 2020-05-30
+## 3.2.2 - 2020-05-30
 
 * Fixes for `msbuild` snippets not showing.
 
