@@ -43,7 +43,7 @@
 			"using Microsoft.Extensions.Configuration;",
 			"using Microsoft.IdentityModel.Tokens;",
 			"",
-			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Helpers {",
+			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Helpers",
 			"{",
 			"    public class JwtHelpers",
 			"    {",
@@ -110,7 +110,8 @@
 			"            return serializeToken;",
 			"        }",
 			"    }",
-			"}"
+			"}",
+			""
 		],
 		"description": "Generate JwtHelpers class"
 	}

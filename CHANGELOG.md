@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.3.1 - 2020-05-30
+
+* Bug fixed
+
 ## 3.3.0 - 2020-05-30
 
 * Add `jwt-helpers` snippet
