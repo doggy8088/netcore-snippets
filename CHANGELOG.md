@@ -2,7 +2,11 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
-## 3.3.3 - 2020-08-02
+## 3.4.0 - 2020-08-02
+
+* Add `MiddlewareExt` to the `middleware-*` snippets
+
+## 3.3.4 - 2020-08-02
 
 * Bug fixed (`middleware-2`)
 
