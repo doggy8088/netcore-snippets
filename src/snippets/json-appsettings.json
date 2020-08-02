@@ -56,7 +56,7 @@
 	"ConnectionString-IP": {
 		"prefix": "connstr-ip",
 		"body": [
-			"\"${1:DefaultConnection}\": \"Server=${2:10.0.0.1};Initial Catalog=${3:DBName};User Id=${4:LoginName};Password=${5:Password}\"$0"
+			"\"${1:DefaultConnection}\": \"Server=${2:localhost};Initial Catalog=${3:DBName};User Id=${4:LoginName};Password=${5:Password}\"$0"
 		],
 		"description": "ConnectionStrings for IP Connection"
 	},

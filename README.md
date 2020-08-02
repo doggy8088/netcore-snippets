@@ -200,10 +200,11 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### C\# (`**/*ContextFactory.cs`)
 
-| Prefix                  | Description                                                              |
-| ----------------------- | ------------------------------------------------------------------------ |
-| ef-dbcontext-factory    | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
-| ef-dbcontext-factory-ip | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
+| Prefix                       | Description                                                              |
+| ---------------------------- | ------------------------------------------------------------------------ |
+| ef-dbcontext-factory         | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
+| ef-dbcontext-factory-ip      | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
+| ef-dbcontext-factory-trusted | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
 
 ## Contributing
 
