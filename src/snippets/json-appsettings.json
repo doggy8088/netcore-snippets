@@ -1,6 +1,6 @@
 {
 	"appsettings.json": {
-		"prefix": "ac-appsettings",
+		"prefix": "appsettings",
 		"body": [
 			"{",
 			"    \"ConnectionStrings\": {",
@@ -18,7 +18,7 @@
 		"description": "appsettings.json"
 	},
 	"appsettings.json-Logging": {
-		"prefix": "ac-logging",
+		"prefix": "logging",
 		"body": [
 			"\"Debug\": {",
 			"    \"LogLevel\": {",
@@ -49,14 +49,14 @@
 	"ConnectionString-Trusted": {
 		"prefix": "connstr-trusted",
 		"body": [
-			"\"${1:DefaultConnection}\": \"Server=${2:(localdb)\\\\\\\\MSSQLLocalDB};Database=${3:DBName};Trusted_Connection=True;MultipleActiveResultSets=true\"$0"
+			"\"${1:DefaultConnection}\": \"Server=${2:(localdb)\\\\\\\\MSSQLLocalDB};Initial Catalog=${3:DBName};Integrated Security=True\"$0"
 		],
 		"description": "ConnectionStrings for Trusted Connection"
 	},
 	"ConnectionString-IP": {
 		"prefix": "connstr-ip",
 		"body": [
-			"\"${1:DefaultConnection}\": \"Server=${2:10.0.0.1};Database=${3:DBName};User Id=${4:LoginName};Password=${5:Password};;MultipleActiveResultSets=true\"$0"
+			"\"${1:DefaultConnection}\": \"Server=${2:10.0.0.1};Initial Catalog=${3:DBName};User Id=${4:LoginName};Password=${5:Password}\"$0"
 		],
 		"description": "ConnectionStrings for IP Connection"
 	},

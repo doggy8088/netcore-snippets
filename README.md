@@ -15,15 +15,18 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ## Snippet Prefixes
 
-| Prefix    | Description                           |
-| --------- | ------------------------------------- |
-| nc-       | General .NET Core Snippets            |
-| ac-       | General ASP.NET Core Snippets         |
-| anc3-     | ASP.NET Core 3 Snippets               |
-| services- | ASP.NET Core Snippets in `Startup.cs` |
-| app-      | ASP.NET Core Snippets in `Startup.cs` |
-| ef-       | Entity Framework Core Snippets        |
-| signalr-  | ASP.NET Core SignalR Snippets         |
+| Prefix      | Description                           |
+| ----------- | ------------------------------------- |
+| nc-         | General .NET Core Snippets            |
+| anc3-       | ASP.NET Core 3 Snippets               |
+| api-        | ASP.NET Core Web API Snippets         |
+| mvc-        | ASP.NET Core MVC Snippets             |
+| services-   | ASP.NET Core Snippets in `Startup.cs` |
+| app-        | ASP.NET Core Snippets in `Startup.cs` |
+| middleware- | ASP․NET Core Middleware Snippets      |
+| signalr-    | ASP.NET Core SignalR Snippets         |
+| grpc-       | ASP․NET Core gRPC Snippets            |
+| ef-         | Entity Framework Core Snippets        |
 
 ## ASP.NET Core Snippets
 
@@ -36,9 +39,22 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### C\#
 
-| Prefix                           | Description                                                                               |
-| -------------------------------- | ----------------------------------------------------------------------------------------- |
-| anc3-program-cs                  | Generates basic `Program` class for ASP.NET Core 3                                        |
+| Prefix                          | Description                                                     |
+| ------------------------------- | --------------------------------------------------------------- |
+| grpc-channel                    | Generate GrpcChannel.ForAddress()                               |
+| jwt-helpers                     | Generate JwtHelpers class                                       |
+| nc-get-connstr                  | config.GetConnectionString()                                    |
+
+### C\# (`**/Program.cs`)
+
+| Prefix                  | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| anc3-program-cs         | Generates basic `Program` class for ASP.NET Core 3                       |
+
+### C\# (`**/Startup*.cs`)
+
+| Prefix                  | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
 | anc3-startup-mvc                 | Generates ASP.NET Core MVC `Startup` class                                                |
 | anc3-startup-api                 | Generates ASP.NET Core Web API `Startup` class                                            |
 | services-add-cors                | Generates `AddCors()` in Startup.ConfigureService()                                       |
@@ -64,26 +80,33 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | app-use-staticfiles              | Generates app.UseStaticFiles() with sample code                                           |
 | app-use-defaultfiles             | Generates app.UseDefaultFiles() with sample code                                          |
 | app-use-directorybrowser         | Generates app.UseDirectoryBrowser() with sample code                                      |
-| ac-api-controller                | Generates an API Controller class                                                         |
-| ac-api-action                    | Generates an API Action: GET                                                              |
-| ac-api-action-post               | Generates an API Action: POST                                                             |
-| ac-api-action-put                | Generates an API Action: PUT                                                              |
-| ac-api-action-delete             | Generates an API Action: DELETE                                                           |
-| ac-mvc-action                    | Generates a MVC Action                                                                    |
-| ac-mvc-action-async              | Generates a MVC Async Action                                                              |
-| ac-middleware-1                  | Generates Middleware class by convention                                                  |
-| ac-middleware-2                  | Generates Middleware class by using IMiddleware                                           |
-| signalr-chat                     | Generates SignalR ChatHub sample code                                                     |
-| grpc-channel                     | Generate GrpcChannel.ForAddress()                                                         |
-| jwt-helpers                      | Generate JwtHelpers class                                                                 |
 
-### Proto3 (gRPC)
+### C\# (`**/*Controller.cs`)
 
-| Prefix                     | Description                                                                   |
-| -------------------------- | ----------------------------------------------------------------------------- |
-| protobuf                   | Generates a sample protobuf file                                              |
+| Prefix                  | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| api-controller          | Generates an API Controller class                                        |
+| api-action              | Generates an API Action: GET                                             |
+| api-action-post         | Generates an API Action: POST                                            |
+| api-action-put          | Generates an API Action: PUT                                             |
+| api-action-delete       | Generates an API Action: DELETE                                          |
+| mvc-action              | Generates a MVC Action                                                   |
+| mvc-action-async        | Generates a MVC Async Action                                             |
 
-### Razor
+### C\# (`**/*Middleware.cs`)
+
+| Prefix                  | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| middleware-1            | Generates Middleware class by convention                                 |
+| middleware-2            | Generates Middleware class by using IMiddleware                          |
+
+### C\# (`**/*Hub.cs`) (SignalR)
+
+| Prefix                  | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| signalr-chat            | Generates SignalR ChatHub sample code                                    |
+
+### Razor (`**/*.cshtml`)
 
 | Prefix                     | Description                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------- |
@@ -143,33 +166,44 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | @Html.EditorForModel       | Generates a ASP.NET Core MVC Html Helper with EditorForModel                  |
 | @Url.Action                | Generates a ASP.NET Core MVC Url Helper with Action                           |
 
-### JSON (`appsettings.json`)
+### JSON (`**/appsettings*.json`)
 
-| Prefix          | Description                                                     |
-| --------------- | --------------------------------------------------------------- |
-| ac-appsettings  | Generates appsettings.json template                             |
-| ac-logging      | Generates more Logging settings                                 |
-| connstr         | Generates a `ConnectionStrings` section with Trusted_Connection |
-| connstr-trusted | Generates a `ConnectionStrings` item with Trusted_Connection    |
-| connstr-ip      | Generates a `ConnectionStrings` item with IP_Connection         |
-| connstr-sqlite  | Generates a `ConnectionStrings` item with SQLite connection     |
+| Prefix          | Description                                                      |
+| --------------- | ---------------------------------------------------------------- |
+| appsettings     | Generates appsettings.json template                              |
+| logging         | Generates more Logging settings                                  |
+| connstr         | Generates a `ConnectionStrings` section                          |
+| connstr-trusted | Generates a `ConnectionStrings` item with Integrated Security    |
+| connstr-ip      | Generates a `ConnectionStrings` item with IP_Connection          |
+| connstr-sqlite  | Generates a `ConnectionStrings` item with SQLite connection      |
+
+### Proto3 (gRPC)
+
+| Prefix                     | Description                                                                   |
+| -------------------------- | ----------------------------------------------------------------------------- |
+| protobuf                   | Generates a sample protobuf file                                              |
 
 ## Entity Framework Core Snippets
 
-### C\#
+### C\# (DbContextOptionsBuilder)
 
-| Prefix               | Description                                                              |
-| -------------------- | ------------------------------------------------------------------------ |
-| ef-dbcontext         | Generates an DbContext class for Entity Framework Core                   |
-| ef-dbcontext-factory | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
+| Prefix                          | Description                                                     |
+| ------------------------------- | --------------------------------------------------------------- |
+| ef-dbcontext-options-builder    | new DbContextOptionsBuilder() with Connection Strings (Trusted) |
+| ef-dbcontext-options-builder-ip | new DbContextOptionsBuilder() with Connection Strings (Trusted) |
 
-### JSON
+### C\# (`**/*Context.cs`) (`**/*Entities.cs`)
 
-| Prefix          | Description                                                           |
-| --------------- | --------------------------------------------------------------------- |
-| connstr         | Generates a `ConnectionStrings` section in a JSON file                |
-| connstr-trusted | Generates a `ConnectionStrings` item with Trusted_Connection template |
-| connstr-ip      | Generates a `ConnectionStrings` item with IP_Connection template      |
+| Prefix                  | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| ef-dbcontext            | Generates an DbContext class for Entity Framework Core                   |
+
+### C\# (`**/*ContextFactory.cs`)
+
+| Prefix                  | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| ef-dbcontext-factory    | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
+| ef-dbcontext-factory-ip | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
 
 ## Contributing
 

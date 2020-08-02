@@ -2,6 +2,11 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.5.0 - 2020-08-03
+
+* Update README
+* Remove some snippet's `prefix` because these snippets are context-aware show up.
+
 ## 3.4.0 - 2020-08-02
 
 * Add `MiddlewareExt` to the `middleware-*` snippets

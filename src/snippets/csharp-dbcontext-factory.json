@@ -1,5 +1,5 @@
 {
-	"IDesignTimeDbContextFactory": {
+	"IDesignTimeDbContextFactory-Trusted": {
 		"prefix": "ef-dbcontext-factory",
 		"body": [
 			"using Microsoft.EntityFrameworkCore;",
@@ -13,7 +13,30 @@
 			"        public ${2/^(.*)(Factory)$/$1/} CreateDbContext(string[] args)",
 			"        {",
 			"            var optionsBuilder = new DbContextOptionsBuilder<${2/^(.*)(Factory)$/$1/}>();",
-			"            optionsBuilder.UseSqlServer(\"Server=(localdb)\\\\\\\\MSSQLLocalDB;Database=${3:DBName};Trusted_Connection=True;MultipleActiveResultSets=true\");",
+			"            optionsBuilder.UseSqlServer(\"Server=${3:(localdb)\\\\\\\\MSSQLLocalDB};Initial Catalog=${4:DBName};Integrated Security=True\");",
+			"",
+			"            return new ${2/^(.*)(Factory)$/$1/}(optionsBuilder.Options);",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "Create a IDesignTimeDbContextFactory class under Models/ folder"
+	},
+	"IDesignTimeDbContextFactory-IP": {
+		"prefix": "ef-dbcontext-factory-ip",
+		"body": [
+			"using Microsoft.EntityFrameworkCore;",
+			"using Microsoft.EntityFrameworkCore.Design;",
+			"using Microsoft.EntityFrameworkCore.Infrastructure;",
+			"",
+			"namespace ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models",
+			"{",
+			"    public class ${2:${TM_FILENAME_BASE}} : IDesignTimeDbContextFactory<${2/(Factory)$//g}>",
+			"    {",
+			"        public ${2/^(.*)(Factory)$/$1/} CreateDbContext(string[] args)",
+			"        {",
+			"            var optionsBuilder = new DbContextOptionsBuilder<${2/^(.*)(Factory)$/$1/}>();",
+			"            optionsBuilder.UseSqlServer(\"Server=${3:localhost};Initial Catalog=${4:DBName};User Id=${5:LoginName};Password=${6:Password}\");",
 			"",
 			"            return new ${2/^(.*)(Factory)$/$1/}(optionsBuilder.Options);",
 			"        }",
