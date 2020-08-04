@@ -4,7 +4,7 @@
 		"body": [
 			"var ${1:optionsBuilder} = new DbContextOptionsBuilder<${2:ContextName}Context>();",
 			"${1}.UseSqlServer(@\"Server=${3:(localdb)\\\\\\\\MSSQLLocalDB};Initial Catalog=${4:DBName};Integrated Security=True\");",
-			"// var db = new TodoContext(${1}.Options)"
+			"// var db = new ${2}Context(${1}.Options)"
 		],
 		"description": "new DbContextOptionsBuilder() with Connection Strings (Trusted)"
 	},
@@ -13,7 +13,7 @@
 		"body": [
 			"var ${1:optionsBuilder} = new DbContextOptionsBuilder<${2:ContextName}Context>();",
 			"${1}.UseSqlServer(@\"Server=${3:localhost};Initial Catalog=${4:DBName};User Id=${5:LoginName};Password=${6:Password}\");",
-			"// var db = new TodoContext(${1}.Options)"
+			"// var db = new ${2}Context(${1}.Options)"
 		],
 		"description": "new DbContextOptionsBuilder() with Connection Strings (IP)"
 	},

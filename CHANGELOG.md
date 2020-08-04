@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.6.1 - 2020-08-05
+
+* Bug fix for `ef-dbcontext-options-builder`, `ef-dbcontext-options-builder-ip`, `ef-dbcontext` and `ef-dbcontext-ip` snippets
+
 ## 3.6.0 - 2020-08-03
 
 * Update `ef-dbcontext` snippet
