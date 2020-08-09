@@ -2,6 +2,17 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.7.0 - 2020-08-10
+
+* Add `jwtsettings` snippet that can use in `appsettings.json`
+* Update some comments and descriptions for a few snippets
+  * `jwt-helpers`
+  * `services-add-auth-jwt`
+  * `connstr`
+  * `connstr-ip`
+  * `connstr-trusted`
+  * `connstr-sqlite`
+
 ## 3.6.1 - 2020-08-05
 
 * Bug fix for `ef-dbcontext-options-builder`, `ef-dbcontext-options-builder-ip`, `ef-dbcontext` and `ef-dbcontext-ip` snippets

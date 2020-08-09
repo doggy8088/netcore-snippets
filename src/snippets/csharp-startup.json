@@ -295,6 +295,7 @@
 	"service.AddAuthentication().AddJwtBearer()": {
 		"prefix": "services-add-auth-jwt",
 		"body": [
+			"// dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer",
 			"services",
 			"    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)",
 			"    .AddJwtBearer(options =>",

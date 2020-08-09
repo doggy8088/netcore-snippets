@@ -168,35 +168,36 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### JSON (`**/appsettings*.json`)
 
-| Prefix          | Description                                                      |
-| --------------- | ---------------------------------------------------------------- |
-| appsettings     | Generates appsettings.json template                              |
-| logging         | Generates more Logging settings                                  |
-| connstr         | Generates a `ConnectionStrings` section                          |
-| connstr-trusted | Generates a `ConnectionStrings` item with Integrated Security    |
-| connstr-ip      | Generates a `ConnectionStrings` item with IP_Connection          |
-| connstr-sqlite  | Generates a `ConnectionStrings` item with SQLite connection      |
+| Prefix          | Description                                                    |
+| --------------- | -------------------------------------------------------------- |
+| appsettings     | Generates `appsettings.json` template                          |
+| logging         | Generates more `Logging` settings                              |
+| jwtsettings     | Generates `JwtSettings` section for `jwt-helpers` snippet      |
+| connstr         | Generates `ConnectionStrings` section                          |
+| connstr-trusted | Generates `ConnectionStrings` item with Integrated Security    |
+| connstr-ip      | Generates `ConnectionStrings` item with IP_Connection          |
+| connstr-sqlite  | Generates `ConnectionStrings` item with SQLite connection      |
 
 ### Proto3 (gRPC)
 
-| Prefix                     | Description                                                                   |
-| -------------------------- | ----------------------------------------------------------------------------- |
-| protobuf                   | Generates a sample protobuf file                                              |
+| Prefix                     | Description                                         |
+| -------------------------- | --------------------------------------------------- |
+| protobuf                   | Generates a sample protobuf file                    |
 
 ## Entity Framework Core Snippets
 
 ### C\# (DbContextOptionsBuilder)
 
-| Prefix                          | Description                                                     |
-| ------------------------------- | --------------------------------------------------------------- |
-| ef-dbcontext-options-builder    | new DbContextOptionsBuilder() with Connection Strings (Trusted) |
-| ef-dbcontext-options-builder-ip | new DbContextOptionsBuilder() with Connection Strings (Trusted) |
+| Prefix                          | Description                                                       |
+| ------------------------------- | ----------------------------------------------------------------- |
+| ef-dbcontext-options-builder    | new `DbContextOptionsBuilder()` with Connection Strings (Trusted) |
+| ef-dbcontext-options-builder-ip | new `DbContextOptionsBuilder()` with Connection Strings (IP)      |
 
 ### C\# (`**/*Context.cs`) (`**/*Entities.cs`)
 
 | Prefix                  | Description                                                              |
-| ----------------------- | ------------------------------------------------------------------------ |
-| ef-dbcontext            | Generates an DbContext class for Entity Framework Core                   |
+| ----------------------- | ------------------------------------------------------ |
+| ef-dbcontext            | Generates an DbContext class for Entity Framework Core |
 
 ### C\# (`**/*ContextFactory.cs`)
 

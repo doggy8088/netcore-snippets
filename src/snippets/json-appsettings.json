@@ -44,27 +44,37 @@
 			"    $0",
 			"},"
 		],
-		"description": "ConnectionStrings for appsettings.json"
+		"description": "Add ConnectionStrings section for appsettings.json"
 	},
 	"ConnectionString-Trusted": {
 		"prefix": "connstr-trusted",
 		"body": [
 			"\"${1:DefaultConnection}\": \"Server=${2:(localdb)\\\\\\\\MSSQLLocalDB};Initial Catalog=${3:DBName};Integrated Security=True\"$0"
 		],
-		"description": "ConnectionStrings for Trusted Connection"
+		"description": "ConnectionStrings for SQL Server (Trusted Connection)"
 	},
 	"ConnectionString-IP": {
 		"prefix": "connstr-ip",
 		"body": [
 			"\"${1:DefaultConnection}\": \"Server=${2:localhost};Initial Catalog=${3:DBName};User Id=${4:LoginName};Password=${5:Password}\"$0"
 		],
-		"description": "ConnectionStrings for IP Connection"
+		"description": "ConnectionStrings for SQL Server (IP Connection)"
 	},
 	"ConnectionString-SQLite": {
 		"prefix": "connstr-sqlite",
 		"body": [
 			"\"${1:DefaultConnection}\": \"Data Source=${2:Database}.db\"$0"
 		],
-		"description": "ConnectionStrings for IP Connection"
-	}
+		"description": "ConnectionStrings for SQLite"
+	},
+	"JwtSettings": {
+		"prefix": "jwtsettings",
+		"body": [
+		  "\"JwtSettings\": {",
+		  "  \"Issuer\": \"${1:IssuerName}\",",
+		  "  \"SignKey\": \"${2:PLEASE_ENTER_A_RANDOM_STRING_MORE_THAN_16_CHARACTERS}\"",
+		  "},"
+		],
+		"description": "JwtSettings"
+	  }
 }
