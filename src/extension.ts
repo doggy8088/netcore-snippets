@@ -104,6 +104,12 @@ export function activate(context: vscode.ExtensionContext) {
     }));
 
     context.subscriptions.push(registerCompletionItemProvider(readAllText('razor-cshtml.json'), {
+        language: 'aspnetcorerazor',
+        pattern: '**/*.cshtml',
+        scheme: 'file',
+    }));
+
+    context.subscriptions.push(registerCompletionItemProvider(readAllText('razor-cshtml.json'), {
         language: 'razor',
         pattern: '**/*.cshtml',
         scheme: 'file',

@@ -2,8 +2,9 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
-## 3.8.1 - 2020-08-15
+## 3.8.2 - 2020-08-15
 
+* Add `aspnetcorerazor` language support
 * Add `script:signalr-cdn` and `script:signalr` snippets (`cshtml`, `html`)
 * Add `signalr-chat` snippet (`javascript`) for JavaScript chat sample
 * Add `script:signalr-chat` snippet (`cshtml`) for JavaScript chat sample
