@@ -165,6 +165,22 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | @Html.DisplayForModel      | Generates a ASP.NET Core MVC Html Helper with DisplayForModel                 |
 | @Html.EditorForModel       | Generates a ASP.NET Core MVC Html Helper with EditorForModel                  |
 | @Url.Action                | Generates a ASP.NET Core MVC Url Helper with Action                           |
+| script:signalr             | Generates a `<script src="...">` that load SignalR client script              |
+| script:signalr-cdn         | Generates a `<script src="...">` that load SignalR client script from CDN     |
+| signalr-chat               | Generates SignalR ChatHub sample code for JavaScript                          |
+
+### HTML (`**/*.{htm,html}`)
+
+| Prefix                     | Description                                                                   |
+| -------------------------- | ----------------------------------------------------------------------------- |
+| script:signalr-cdn         | Generates a `<script src="...">` that load SignalR client script from CDN     |
+| signalr-chat               | Generates SignalR ChatHub sample code for JavaScript                          |
+
+### JavaScript (`**/*.js`)
+
+| Prefix                  | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| signalr-chat            | Generates SignalR ChatHub sample code for JavaScript                     |
 
 ### JSON (`**/appsettings*.json`)
 

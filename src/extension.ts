@@ -97,6 +97,12 @@ export function activate(context: vscode.ExtensionContext) {
     //     scheme: 'file',
     // }));
 
+    context.subscriptions.push(registerCompletionItemProvider(readAllText('html-signalr.json'), {
+        language: 'html',
+        pattern: '**/*.{htm,html}',
+        scheme: 'file',
+    }));
+
     context.subscriptions.push(registerCompletionItemProvider(readAllText('razor-cshtml.json'), {
         language: 'razor',
         pattern: '**/*.cshtml',
