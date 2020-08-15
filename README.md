@@ -167,14 +167,13 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | @Url.Action                | Generates a ASP.NET Core MVC Url Helper with Action                           |
 | script:signalr             | Generates a `<script src="...">` that load SignalR client script              |
 | script:signalr-cdn         | Generates a `<script src="...">` that load SignalR client script from CDN     |
-| signalr-chat               | Generates SignalR ChatHub sample code for JavaScript                          |
+| script:signalr-chat        | Generates SignalR ChatHub sample code for JavaScript                          |
 
 ### HTML (`**/*.{htm,html}`)
 
 | Prefix                     | Description                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------- |
 | script:signalr-cdn         | Generates a `<script src="...">` that load SignalR client script from CDN     |
-| signalr-chat               | Generates SignalR ChatHub sample code for JavaScript                          |
 
 ### JavaScript (`**/*.js`)
 

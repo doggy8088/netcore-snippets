@@ -5,24 +5,5 @@
 			"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/${1:3.1.7}/signalr.js\"></script>"
 		],
 		"description": "SignalR client script from CDN"
-	},
-	"Generates SignalR ChatHub sample code": {
-        "prefix": "signalr-chat",
-        "body": [
-            "var connection = new signalR.HubConnectionBuilder().withUrl(\"${1:/chatHub}\").build();",
-            "",
-            "connection.on(\"ReceiveMessage\", function (user, message) {",
-            "    alert(`Hi \\${user}, you said: \\${message}`)",
-            "});",
-            "",
-            "connection.start().then(function () {",
-            "    connection.invoke(\"SendMessage\", '${2:Will}', '${3:Hello World}').catch(function (err) {",
-            "        return console.error(err.toString());",
-            "    });",
-            "}).catch(function (err) {",
-            "    return console.error(err.toString());",
-            "});"
-        ],
-        "description": "Generates SignalR ChatHub sample code"
-    }
+	}
 }

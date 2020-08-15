@@ -2,10 +2,11 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
-## 3.8.0 - 2020-08-15
+## 3.8.1 - 2020-08-15
 
-* Add `script:signalr-cdn` and `script:signalr` snippets
-* Add `signalr-chat` snippet for JavaScript chat sample
+* Add `script:signalr-cdn` and `script:signalr` snippets (`cshtml`, `html`)
+* Add `signalr-chat` snippet (`javascript`) for JavaScript chat sample
+* Add `script:signalr-chat` snippet (`cshtml`) for JavaScript chat sample
 
 ## 3.7.0 - 2020-08-10
 
