@@ -326,6 +326,13 @@
 		],
 		"description": "service.AddAuthentication().AddJwtBearer()"
 	},
+	"services.Configure()": {
+		"prefix": "services-configure",
+		"body": [
+			"services.Configure<${1:AppSettings}>(Configuration${2:.GetSection(\"${3:MyApp}\")});"
+		],
+		"description": "services.Configure()"
+	},
 	"app.UseSpa": {
 		"prefix": "app-use-spa",
 		"body": [

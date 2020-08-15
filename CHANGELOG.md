@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.9.0 - 2020-08-15
+
+* Add `services-configure` snippet
+
 ## 3.8.2 - 2020-08-15
 
 * Add `aspnetcorerazor` language support

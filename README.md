@@ -53,10 +53,11 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### C\# (`**/Startup*.cs`)
 
-| Prefix                  | Description                                                              |
-| ----------------------- | ------------------------------------------------------------------------ |
+| Prefix                           | Description                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------------- |
 | anc3-startup-mvc                 | Generates ASP.NET Core MVC `Startup` class                                                |
 | anc3-startup-api                 | Generates ASP.NET Core Web API `Startup` class                                            |
+| services-configure               | Generates `Configure()` in Startup.ConfigureService()                                     |
 | services-add-cors                | Generates `AddCors()` in Startup.ConfigureService()                                       |
 | services-add-dbcontext           | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()           |
 | services-add-dbcontext-inmemory  | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService()    |
