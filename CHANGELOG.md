@@ -2,6 +2,11 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.10.0 - 2020-08-18
+
+* Add `grpc-packages` snippet in MSBuild language
+* Rename `protobuf` snippet to `grpc-protobuf`
+
 ## 3.9.0 - 2020-08-15
 
 * Add `services-configure` snippet

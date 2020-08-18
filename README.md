@@ -32,10 +32,11 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 ### MSBuild (`.csproj`)
 
-| Prefix       | Description                                   |
-| ------------ | --------------------------------------------- |
-| anc3-default | Generates Default ASP.NET Core 3 MSBuild file |
-| protobuf     | Add Protobuf item within a ItemGroup (csproj) |
+| Prefix        | Description                                   |
+| ------------- | --------------------------------------------- |
+| anc3-default  | Generates Default ASP.NET Core 3 MSBuild file |
+| grpc-protobuf | Add Protobuf property item (csproj)           |
+| grpc-packages | Add gRPC-related packages (csproj)            |
 
 ### C\#
 

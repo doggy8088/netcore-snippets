@@ -18,7 +18,7 @@
 		"description": "ASP.NET Core 3.0 Default MSBuild file (csproj)"
 	},
 	"Protobuf": {
-		"prefix": "protobuf",
+		"prefix": "grpc-protobuf",
 		"body": [
 			"<ItemGroup>",
 			"  <Protobuf Include=\"${1:Protos/greet.proto}\" GrpcServices=\"${2|Client,Server|}\" />",
@@ -27,5 +27,19 @@
 			""
 		],
 		"description": "Add Protobuf item within a ItemGroup (csproj)"
+	},
+	"grpc-packages": {
+		"prefix": "grpc-packages",
+		"body": [
+			"<ItemGroup>",
+			"  <PackageReference Include=\"Google.Protobuf\" Version=\"${1:3.13.0}\" />",
+			"  <PackageReference Include=\"Grpc.Net.Client\" Version=\"${2:2.31.0}\" />",
+			"  <PackageReference Include=\"Grpc.Tools\" Version=\"${2}\">",
+			"    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>",
+			"    <PrivateAssets>all</PrivateAssets>",
+			"  </PackageReference>",
+			"</ItemGroup>"
+		],
+		"description": "Add gRPC related packages"
 	}
 }
