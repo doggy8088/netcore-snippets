@@ -59,6 +59,16 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | anc3-startup-mvc                 | Generates ASP.NET Core MVC `Startup` class                                                |
 | anc3-startup-api                 | Generates ASP.NET Core Web API `Startup` class                                            |
 | services-configure               | Generates `Configure()` in Startup.ConfigureService()                                     |
+| services-add-transient-1         | Generates `services.AddTransient<TService>()` in Startup.ConfigureService()               |
+| services-add-transient-2         | Generates `services.AddTransient<IService, TImplementation>()` in Startup.ConfigureService() |
+| services-add-transient-3         | Generates `service.AddTransient<T>(FactoryMethod)` in Startup.ConfigureService()          |
+| services-add-scoped-1            | Generates `services.AddScoped<TService>()` in Startup.ConfigureService()                  |
+| services-add-scoped-2            | Generates `services.AddScoped<IService, TImplementation>()` in Startup.ConfigureService() |
+| services-add-scoped-3            | Generates `service.AddScoped<T>(FactoryMethod)` in Startup.ConfigureService()             |
+| services-add-singleton-1         | Generates `services.AddSingleton<TService>()` in Startup.ConfigureService()               |
+| services-add-singleton-2         | Generates `services.AddSingleton<IService, TImplementation>()` in Startup.ConfigureService() |
+| services-add-singleton-3         | Generates `service.AddSingleton<T>(FactoryMethod)` in Startup.ConfigureService()          |
+| services-add-singleton-4         | Generates `services.AddSingleton<IService>(new TService())` in Startup.ConfigureService() |
 | services-add-cors                | Generates `AddCors()` in Startup.ConfigureService()                                       |
 | services-add-dbcontext           | Generates `AddDbContext()` with **UseSqlServer** in Startup.ConfigureService()           |
 | services-add-dbcontext-inmemory  | Generates `AddDbContext()` with **UseInMemoryDatabase** in Startup.ConfigureService()    |
@@ -69,19 +79,13 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | services-add-mvc-json-camel      | Generates `AddMvc()` with `AddJsonOptions()` using CamelCasePropertyNamesContractResolver |
 | services-add-mvc-json-converters | Generates `AddMvc()` with `AddJsonOptions()` using custom Converters                      |
 | services-add-spastaticfiles      | Generates `AddSpaStaticFiles()` in Startup.ConfigureService()                             |
-| services-add-singleton-1         | Generates `AddSingleton<I, T>()` in Startup.ConfigureService()                            |
-| services-add-singleton-2         | Generates `AddSingleton<I>(T)` in Startup.ConfigureService()                              |
-| services-add-singleton-3         | Generates `AddSingleton<I>(NewInstance)` in Startup.ConfigureService()                    |
-| services-add-transient-1         | Generates `AddTransient<I, T>()` with Interface                                           |
-| services-add-transient-2         | Generates `AddTransient<T, T>()` with Class                                               |
-| services-add-scoped              | Generates `AddScoped<I, T>()` in Startup.ConfigureService()                               |
-| app-use                          | Generates `app.Use()`                                                                     |
-| app-run                          | Generates `app.Run()`                                                                     |
-| app-map                          | Generates `app.Map()`                                                                     |
+| app-use                          | Generates `app.Use()` in Startup.Configure()                                              |
+| app-run                          | Generates `app.Run()` in Startup.Configure()                                              |
+| app-map                          | Generates `app.Map()` in Startup.Configure()                                              |
 | app-use-spa                      | Generates `UseSpa()` in Startup.Configure()                                               |
-| app-use-staticfiles              | Generates app.UseStaticFiles() with sample code                                           |
-| app-use-defaultfiles             | Generates app.UseDefaultFiles() with sample code                                          |
-| app-use-directorybrowser         | Generates app.UseDirectoryBrowser() with sample code                                      |
+| app-use-staticfiles              | Generates `app.UseStaticFiles()` in Startup.Configure()                                   |
+| app-use-defaultfiles             | Generates `app.UseDefaultFiles()` in Startup.Configure()                                  |
+| app-use-directorybrowser         | Generates `app.UseDirectoryBrowser()` in Startup.Configure()                              |
 
 ### C\# (`**/*Controller.cs`)
 

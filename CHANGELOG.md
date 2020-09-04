@@ -2,6 +2,20 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.11.0 - 2020-09-04
+
+* Refactoring all DI-related snippets
+  * `services-add-transient-1`
+  * `services-add-transient-2`
+  * `services-add-transient-3`
+  * `services-add-scoped-1`
+  * `services-add-scoped-2`
+  * `services-add-scoped-3`
+  * `services-add-singleton-1`
+  * `services-add-singleton-2`
+  * `services-add-singleton-3`
+  * `services-add-singleton-4`
+
 ## 3.10.0 - 2020-08-18
 
 * Add `grpc-packages` snippet in MSBuild language
