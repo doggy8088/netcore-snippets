@@ -2,6 +2,17 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.12.0 - 2020-09-12
+
+* Add async snippets for MVC and API
+  * `api-controller-async`
+  * `api-action-async`
+  * `api-action-post-async`
+  * `api-action-put-async`
+  * `api-action-delete-async`
+  * `mvc-controller-async`
+  * `mvc-action-async`
+
 ## 3.11.0 - 2020-09-04
 
 * Refactoring all DI-related snippets

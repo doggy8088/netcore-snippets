@@ -7,6 +7,60 @@
 			"using System.Linq;",
 			"using System.Threading.Tasks;",
 			"using Microsoft.AspNetCore.Mvc;",
+			"${4://}using ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models;",
+			"",
+			"namespace ${1}.Controllers",
+			"{",
+			"    [Route(\"api/[controller]\")]",
+			"    [ApiController]",
+			"    public class ${2:${TM_FILENAME_BASE/Controller//}}Controller : ControllerBase",
+			"    {",
+			"        public ${2}Controller($0)",
+			"        {",
+			"        }",
+			"",
+			"        [HttpGet(\"\")]",
+			"        public ActionResult<IEnumerable<${3:TModel}>> Get${3}s()",
+			"        {",
+			"            return new List<${3}> { };",
+			"        }",
+			"",
+			"        [HttpGet(\"{id}\")]",
+			"        public ActionResult<${3:${2}}> Get${3}ById(int id)",
+			"        {",
+			"            return null;",
+			"        }",
+			"",
+			"        [HttpPost(\"\")]",
+			"        public ActionResult<${3}> Post${3}(${3:${2}} model)",
+			"        {",
+			"            return null;",
+			"        }",
+			"",
+			"        [HttpPut(\"{id}\")]",
+			"        public IActionResult Put${3}(int id, ${3:${2}} model)",
+			"        {",
+			"            return NoContent();",
+			"        }",
+			"",
+			"        [HttpDelete(\"{id}\")]",
+			"        public ActionResult<${3}> Delete${3}ById(int id)",
+			"        {",
+			"            return null;",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "Create async API Controller"
+	},
+	"Create async API Controller": {
+		"prefix": "api-controller-async",
+		"body": [
+			"using System;",
+			"using System.Collections.Generic;",
+			"using System.Linq;",
+			"using System.Threading.Tasks;",
+			"using Microsoft.AspNetCore.Mvc;",
 			"${5://}using ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models;",
 			"",
 			"namespace ${1}.Controllers",
@@ -19,52 +73,218 @@
 			"        {",
 			"        }",
 			"",
-			"        // GET api/${3:${TM_FILENAME_BASE/(.*)Controller/${1:/downcase}/}}",
 			"        [HttpGet(\"\")]",
-			"        public ActionResult<IEnumerable<${4:string}>> Get${4}s()",
+			"        public async Task<ActionResult<IEnumerable<${4:TModel}>>> Get${4}s()",
 			"        {",
+			"            // TODO: Your code here",
+			"            await Task.Yield();",
+			"",
 			"            return new List<${4}> { };",
 			"        }",
 			"",
-			"        // GET api/${3}/5",
 			"        [HttpGet(\"{id}\")]",
-			"        public ActionResult<${4:${2}}> Get${4}ById(int id)",
+			"        public async Task<ActionResult<${4:${2}}>> Get${4}ById(int id)",
 			"        {",
+			"            // TODO: Your code here",
+			"            await Task.Yield();",
+			"",
 			"            return null;",
 			"        }",
 			"",
-			"        // POST api/${3}",
 			"        [HttpPost(\"\")]",
-			"        public void Post${4}(${4:${2}} value)",
+			"        public async Task<ActionResult<${4}>> Post${4}(${4:${2}} model)",
 			"        {",
+			"            // TODO: Your code here",
+			"            await Task.Yield();",
+			"",
+			"            return null;",
 			"        }",
 			"",
-			"        // PUT api/${3}/5",
 			"        [HttpPut(\"{id}\")]",
-			"        public void Put${4}(int id, ${4:${2}} value)",
+			"        public async Task<IActionResult> Put${4}(int id, ${4:${2}} model)",
 			"        {",
+			"            // TODO: Your code here",
+			"            await Task.Yield();",
+			"",
+			"            return NoContent();",
 			"        }",
 			"",
-			"        // DELETE api/${3}/5",
 			"        [HttpDelete(\"{id}\")]",
-			"        public void Delete${4}ById(int id)",
+			"        public async Task<ActionResult<${4}>> Delete${4}ById(int id)",
 			"        {",
+			"            // TODO: Your code here",
+			"            await Task.Yield();",
+			"",
+			"            return null;",
 			"        }",
 			"    }",
 			"}"
 		],
-		"description": "Create API Controller"
+		"description": "Create async API Controller"
 	},
 	"Create API action method: GET": {
 		"prefix": "api-action",
 		"body": [
-			"[HttpGet(\"${1}\")]",
-			"public ActionResult<IEnumerable<${2:string}>> Get${3}() {",
-			"    $0",
+			"[HttpGet(\"${2}\")]",
+			"public ActionResult<IEnumerable<${1:TModel}>> Get${1}()",
+			"{",
+			"    return null$0;",
 			"}",
 			""
 		],
-		"description": "Create a API action method"
+		"description": "Create API action method"
+	},
+	"Create async API action method: GET": {
+		"prefix": "api-action-async",
+		"body": [
+			"[HttpGet(\"${2}\")]",
+			"public async Task<ActionResult<IEnumerable<${1:TModel}>>> Get${1}()",
+			"{",
+			"    // TODO: Your code here",
+			"    await Task.Yield();",
+			"",
+			"    return null$0;",
+			"}",
+			""
+		],
+		"description": "Create async API action method"
+	},
+	"Create API action method: POST": {
+		"prefix": "api-action-post",
+		"body": [
+			"[HttpPost(\"${2}\")]",
+			"public ActionResult<${1:TModel}> Post${1}(${1} model)",
+			"{",
+			"    return null$0;",
+			"}",
+			""
+		],
+		"description": "Create API action method: POST"
+	},
+	"Create async API action method: POST": {
+		"prefix": "api-action-post-async",
+		"body": [
+			"[HttpPost(\"${1}\")]",
+			"public async Task<ActionResult<${2:TModel}>> Post${2}(${2} model)",
+			"{",
+			"    // TODO: Your code here",
+			"    await Task.Yield();",
+			"",
+			"    return null$0;",
+			"}",
+			""
+		],
+		"description": "Create async API action method: POST"
+	},
+	"Create API action method: PUT": {
+		"prefix": "api-action-put",
+		"body": [
+			"[HttpPut(\"{id}\")]",
+			"public IActionResult Put${1:TModel}(int id, ${1} model)",
+			"{",
+			"    $0",
+			"    return NoContent();",
+			"}"
+		],
+		"description": "Create API action method: PUT"
+	},
+	"Create async API action method: PUT": {
+		"prefix": "api-action-put-async",
+		"body": [
+			"[HttpPut(\"{id}\")]",
+			"public async Task<IActionResult> Put${1:TModel}(int id, ${1} model)",
+			"{",
+			"    $0// TODO: Your code here",
+			"    await Task.Yield();",
+			"",
+			"    return NoContent();",
+			"}"
+		],
+		"description": "Create API action method: PUT"
+	},
+	"Create API action method: DELETE": {
+		"prefix": "api-action-delete",
+		"body": [
+			"[HttpDelete(\"{id}\")]",
+			"public ActionResult<${1:Model}> Delete${1}ById(int id)",
+			"{",
+			"    return null$0;",
+			"}",
+			""
+		],
+		"description": "Create API action method: DELETE"
+	},
+	"Create async API action method: DELETE": {
+		"prefix": "api-action-delete-async",
+		"body": [
+			"[HttpDelete(\"{id}\")]",
+			"public async Task<ActionResult<${1:TModel}>> Delete${1}ById(int id)",
+			"{",
+			"    // TODO: Your code here",
+			"    await Task.Yield();",
+			"",
+			"    return null$0;",
+			"}",
+			""
+		],
+		"description": "Create API action method: DELETE"
+	},
+	"Create MVC Controller": {
+		"prefix": "mvc-controller",
+		"body": [
+			"using System;",
+			"using System.Collections.Generic;",
+			"using System.Linq;",
+			"using System.Threading.Tasks;",
+			"using Microsoft.AspNetCore.Mvc;",
+			"${3://}using ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models;",
+			"",
+			"namespace ${1}.Controllers",
+			"{",
+			"    public class ${2:${TM_FILENAME_BASE/Controller//}}Controller : Controller",
+			"    {",
+			"        public ${2}Controller($0)",
+			"        {",
+			"        }",
+			"",
+			"        public IActionResult Index()",
+			"        {",
+			"            return View();",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "Create MVC Controller"
+	},
+	"Create async MVC Controller": {
+		"prefix": "mvc-controller-async",
+		"body": [
+			"using System;",
+			"using System.Collections.Generic;",
+			"using System.Linq;",
+			"using System.Threading.Tasks;",
+			"using Microsoft.AspNetCore.Mvc;",
+			"${3://}using ${1:${TM_DIRECTORY/^.*[\\\\\\/]([^\\\\\\/]+)[\\\\\\/][^\\\\\\/]+$/$1/}}.Models;",
+			"",
+			"namespace ${1}.Controllers",
+			"{",
+			"    public class ${2:${TM_FILENAME_BASE/Controller//}}Controller : Controller",
+			"    {",
+			"        public ${2}Controller($0)",
+			"        {",
+			"        }",
+			"",
+			"        public async Task<IActionResult> Index()",
+			"        {",
+			"            // TODO: Your code here",
+			"            await Task.Yield();",
+			"",
+			"            return View();",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "Create async MVC Controller"
 	},
 	"Create MVC Action": {
 		"prefix": "mvc-action",
@@ -76,7 +296,7 @@
 			"}",
 			""
 		],
-		"description": "Create a MVC action method"
+		"description": "Create MVC action method"
 	},
 	"Create MVC Async Action": {
 		"prefix": "mvc-action-async",
@@ -85,43 +305,11 @@
 			"{",
 			"    // TODO: Your code here",
 			"    await Task.Yield();",
+			"",
 			"    return View();",
 			"}",
 			""
 		],
-		"description": "Create a MVC Async Action"
-	},
-	"Create API action method: POST": {
-		"prefix": "api-action-post",
-		"body": [
-			"[HttpPost(\"${1}\")]",
-			"public void Post${2}([FromBody] ${3:string} value) {",
-			"    $0",
-			"}",
-			""
-		],
-		"description": "Create a API action method: POST"
-	},
-	"Create API action method: PUT": {
-		"prefix": "api-action-put",
-		"body": [
-			"[HttpPut(\"${1}/{id}\")]",
-			"public void Put${2}(int id, [FromBody] ${3:string} value) {",
-			"    $0",
-			"}",
-			""
-		],
-		"description": "Create a API action method: PUT"
-	},
-	"Create API action method: DELETE": {
-		"prefix": "api-action-delete",
-		"body": [
-			"[HttpDelete(\"${1}/{id}\")]",
-			"public void Delete${2}ById(int id) {",
-			"    $0",
-			"}",
-			""
-		],
-		"description": "Create a API action method: DELETE"
+		"description": "Create async MVC action"
 	}
 }

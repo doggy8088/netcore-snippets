@@ -91,13 +91,20 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 | Prefix                  | Description                                                              |
 | ----------------------- | ------------------------------------------------------------------------ |
-| api-controller          | Generates an API Controller class                                        |
-| api-action              | Generates an API Action: GET                                             |
-| api-action-post         | Generates an API Action: POST                                            |
-| api-action-put          | Generates an API Action: PUT                                             |
-| api-action-delete       | Generates an API Action: DELETE                                          |
-| mvc-action              | Generates a MVC Action                                                   |
-| mvc-action-async        | Generates a MVC Async Action                                             |
+| api-controller          | Generates API Controller                                                 |
+| api-action              | Generates API Action: GET                                                |
+| api-action-post         | Generates API Action: POST                                               |
+| api-action-put          | Generates API Action: PUT                                                |
+| api-action-delete       | Generates API Action: DELETE                                             |
+| mvc-controller          | Generates MVC Controller                                                 |
+| mvc-action              | Generates MVC Action                                                     |
+| api-controller-async    | Generates async API Async Controller                                     |
+| api-action-async        | Generates async API Action: GET                                          |
+| api-action-post-async   | Generates async API Action: POST                                         |
+| api-action-put-async    | Generates async API Action: PUT                                          |
+| api-action-delete-async | Generates async API Action: DELETE                                       |
+| mvc-controller-async    | Generates async MVC Controller                                           |
+| mvc-action-async        | Generates async MVC Async Action                                         |
 
 ### C\# (`**/*Middleware.cs`)
 
@@ -116,11 +123,11 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 | Prefix                     | Description                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------- |
-| environment                | Generates an `<environment include="">` block (Triggered by `<` and `env` )   |
-| environment-exclude        | Generates an `<environment exclude="">` block (Triggered by `<` and `envex` ) |
-| @environment               | Generates an `<environment include="">` block (Include surrounding snippet)   |
-| @environment-exclude       | Generates an `<environment exclude="">` block (Include surrounding snippet)   |
-| @inject                    | Generates an @inject block                                                    |
+| environment                | Generates `<environment include="">` block (Triggered by `<` and `env` )   |
+| environment-exclude        | Generates `<environment exclude="">` block (Triggered by `<` and `envex` ) |
+| @environment               | Generates `<environment include="">` block (Include surrounding snippet)   |
+| @environment-exclude       | Generates `<environment exclude="">` block (Include surrounding snippet)   |
+| @inject                    | Generates @inject block                                                    |
 | @model                     | Generates @model usage in Razor page                                          |
 | @if                        | Generates if statement in Razor page                                          |
 | @foreach                   | Generates foreach statement in Razor page                                     |
@@ -130,56 +137,56 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | @TempData                  | Generates TempData usage in Razor page                                        |
 | @RenderSection             | Generates @RenderSection usage in Razor page (Layout)                         |
 | @section                   | Generates @section usage in Razor page                                        |
-| @Html.ActionLink           | Generates a ASP.NET Core MVC Html Helper with ActionLink                      |
-| @Html.Action               | Generates a ASP.NET Core MVC Html Helper with Action                          |
-| @Html.Partial              | Generates a ASP.NET Core MVC Html Helper with Partial                         |
-| @Html.BeginForm            | Generates a ASP.NET Core MVC Html Helper with BeginForm                       |
-| @Html.BeginForm-enctype    | Generates a ASP.NET Core MVC Html Helper with BeginForm (for FileUpload)      |
-| @Html.AntiForgeryToken     | Generates a ASP.NET Core MVC Html Helper with AntiForgeryToken                |
-| @Html.Id                   | Generates a ASP.NET Core MVC Html Helper with Id                              |
-| @Html.Name                 | Generates a ASP.NET Core MVC Html Helper with Name                            |
-| @Html.Value                | Generates a ASP.NET Core MVC Html Helper with Value                           |
-| @Html.ValidationSummary    | Generates a ASP.NET Core MVC Html Helper with ValidationSummary               |
-| @Html.DropDownList         | Generates a ASP.NET Core MVC Html Helper with DropDownList                    |
-| @Html.ListBox              | Generates a ASP.NET Core MVC Html Helper with ListBox                         |
-| @Html.CheckBox             | Generates a ASP.NET Core MVC Html Helper with CheckBox                        |
-| @Html.Label                | Generates a ASP.NET Core MVC Html Helper with Label                           |
-| @Html.TextBox              | Generates a ASP.NET Core MVC Html Helper with TextBox                         |
-| @Html.TextArea             | Generates a ASP.NET Core MVC Html Helper with TextArea                        |
-| @Html.Password             | Generates a ASP.NET Core MVC Html Helper with Password                        |
-| @Html.RadioButton          | Generates a ASP.NET Core MVC Html Helper with RadioButton                     |
-| @Html.Hidden               | Generates a ASP.NET Core MVC Html Helper with Hidden                          |
-| @Html.IdFor                | Generates a ASP.NET Core MVC Html Helper with IdFor                           |
-| @Html.NameFor              | Generates a ASP.NET Core MVC Html Helper with NameFor                         |
-| @Html.ValueFor             | Generates a ASP.NET Core MVC Html Helper with ValueFor                        |
-| @Html.ValidationSummaryFor | Generates a ASP.NET Core MVC Html Helper with ValidationSummaryFor            |
-| @Html.DropDownListFor      | Generates a ASP.NET Core MVC Html Helper with DropDownListFor                 |
-| @Html.ListBoxFor           | Generates a ASP.NET Core MVC Html Helper with ListBoxFor                      |
-| @Html.CheckBoxFor          | Generates a ASP.NET Core MVC Html Helper with CheckBoxFor                     |
-| @Html.LabelFor             | Generates a ASP.NET Core MVC Html Helper with LabelFor                        |
-| @Html.TextBoxFor           | Generates a ASP.NET Core MVC Html Helper with TextBoxFor                      |
-| @Html.TextAreaFor          | Generates a ASP.NET Core MVC Html Helper with TextAreaFor                     |
-| @Html.PasswordFor          | Generates a ASP.NET Core MVC Html Helper with PasswordFor                     |
-| @Html.RadioButtonFor       | Generates a ASP.NET Core MVC Html Helper with RadioButtonFor                  |
-| @Html.HiddenFor            | Generates a ASP.NET Core MVC Html Helper with HiddenFor                       |
-| @Html.DisplayName          | Generates a ASP.NET Core MVC Html Helper with DisplayName                     |
-| @Html.Display              | Generates a ASP.NET Core MVC Html Helper with Display                         |
-| @Html.Editor               | Generates a ASP.NET Core MVC Html Helper with Editor                          |
-| @Html.DisplayNameFor       | Generates a ASP.NET Core MVC Html Helper with DisplayNameFor                  |
-| @Html.DisplayFor           | Generates a ASP.NET Core MVC Html Helper with DisplayFor                      |
-| @Html.EditorFor            | Generates a ASP.NET Core MVC Html Helper with EditorFor                       |
-| @Html.DisplayForModel      | Generates a ASP.NET Core MVC Html Helper with DisplayForModel                 |
-| @Html.EditorForModel       | Generates a ASP.NET Core MVC Html Helper with EditorForModel                  |
-| @Url.Action                | Generates a ASP.NET Core MVC Url Helper with Action                           |
-| script:signalr             | Generates a `<script src="...">` that load SignalR client script              |
-| script:signalr-cdn         | Generates a `<script src="...">` that load SignalR client script from CDN     |
+| @Html.ActionLink           | Generates ASP.NET Core MVC Html Helper with ActionLink                      |
+| @Html.Action               | Generates ASP.NET Core MVC Html Helper with Action                          |
+| @Html.Partial              | Generates ASP.NET Core MVC Html Helper with Partial                         |
+| @Html.BeginForm            | Generates ASP.NET Core MVC Html Helper with BeginForm                       |
+| @Html.BeginForm-enctype    | Generates ASP.NET Core MVC Html Helper with BeginForm (for FileUpload)      |
+| @Html.AntiForgeryToken     | Generates ASP.NET Core MVC Html Helper with AntiForgeryToken                |
+| @Html.Id                   | Generates ASP.NET Core MVC Html Helper with Id                              |
+| @Html.Name                 | Generates ASP.NET Core MVC Html Helper with Name                            |
+| @Html.Value                | Generates ASP.NET Core MVC Html Helper with Value                           |
+| @Html.ValidationSummary    | Generates ASP.NET Core MVC Html Helper with ValidationSummary               |
+| @Html.DropDownList         | Generates ASP.NET Core MVC Html Helper with DropDownList                    |
+| @Html.ListBox              | Generates ASP.NET Core MVC Html Helper with ListBox                         |
+| @Html.CheckBox             | Generates ASP.NET Core MVC Html Helper with CheckBox                        |
+| @Html.Label                | Generates ASP.NET Core MVC Html Helper with Label                           |
+| @Html.TextBox              | Generates ASP.NET Core MVC Html Helper with TextBox                         |
+| @Html.TextArea             | Generates ASP.NET Core MVC Html Helper with TextArea                        |
+| @Html.Password             | Generates ASP.NET Core MVC Html Helper with Password                        |
+| @Html.RadioButton          | Generates ASP.NET Core MVC Html Helper with RadioButton                     |
+| @Html.Hidden               | Generates ASP.NET Core MVC Html Helper with Hidden                          |
+| @Html.IdFor                | Generates ASP.NET Core MVC Html Helper with IdFor                           |
+| @Html.NameFor              | Generates ASP.NET Core MVC Html Helper with NameFor                         |
+| @Html.ValueFor             | Generates ASP.NET Core MVC Html Helper with ValueFor                        |
+| @Html.ValidationSummaryFor | Generates ASP.NET Core MVC Html Helper with ValidationSummaryFor            |
+| @Html.DropDownListFor      | Generates ASP.NET Core MVC Html Helper with DropDownListFor                 |
+| @Html.ListBoxFor           | Generates ASP.NET Core MVC Html Helper with ListBoxFor                      |
+| @Html.CheckBoxFor          | Generates ASP.NET Core MVC Html Helper with CheckBoxFor                     |
+| @Html.LabelFor             | Generates ASP.NET Core MVC Html Helper with LabelFor                        |
+| @Html.TextBoxFor           | Generates ASP.NET Core MVC Html Helper with TextBoxFor                      |
+| @Html.TextAreaFor          | Generates ASP.NET Core MVC Html Helper with TextAreaFor                     |
+| @Html.PasswordFor          | Generates ASP.NET Core MVC Html Helper with PasswordFor                     |
+| @Html.RadioButtonFor       | Generates ASP.NET Core MVC Html Helper with RadioButtonFor                  |
+| @Html.HiddenFor            | Generates ASP.NET Core MVC Html Helper with HiddenFor                       |
+| @Html.DisplayName          | Generates ASP.NET Core MVC Html Helper with DisplayName                     |
+| @Html.Display              | Generates ASP.NET Core MVC Html Helper with Display                         |
+| @Html.Editor               | Generates ASP.NET Core MVC Html Helper with Editor                          |
+| @Html.DisplayNameFor       | Generates ASP.NET Core MVC Html Helper with DisplayNameFor                  |
+| @Html.DisplayFor           | Generates ASP.NET Core MVC Html Helper with DisplayFor                      |
+| @Html.EditorFor            | Generates ASP.NET Core MVC Html Helper with EditorFor                       |
+| @Html.DisplayForModel      | Generates ASP.NET Core MVC Html Helper with DisplayForModel                 |
+| @Html.EditorForModel       | Generates ASP.NET Core MVC Html Helper with EditorForModel                  |
+| @Url.Action                | Generates ASP.NET Core MVC Url Helper with Action                           |
+| script:signalr             | Generates `<script src="...">` that load SignalR client script              |
+| script:signalr-cdn         | Generates `<script src="...">` that load SignalR client script from CDN     |
 | script:signalr-chat        | Generates SignalR ChatHub sample code for JavaScript                          |
 
 ### HTML (`**/*.{htm,html}`)
 
 | Prefix                     | Description                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------- |
-| script:signalr-cdn         | Generates a `<script src="...">` that load SignalR client script from CDN     |
+| script:signalr-cdn         | Generates `<script src="...">` that load SignalR client script from CDN     |
 
 ### JavaScript (`**/*.js`)
 
@@ -203,7 +210,7 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 | Prefix                     | Description                                         |
 | -------------------------- | --------------------------------------------------- |
-| protobuf                   | Generates a sample protobuf file                    |
+| protobuf                   | Generates sample protobuf file                    |
 
 ## Entity Framework Core Snippets
 
@@ -218,15 +225,15 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 | Prefix                  | Description                                                              |
 | ----------------------- | ------------------------------------------------------ |
-| ef-dbcontext            | Generates an DbContext class for Entity Framework Core |
+| ef-dbcontext            | Generates DbContext class for Entity Framework Core |
 
 ### C\# (`**/*ContextFactory.cs`)
 
 | Prefix                       | Description                                                              |
 | ---------------------------- | ------------------------------------------------------------------------ |
-| ef-dbcontext-factory         | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
-| ef-dbcontext-factory-ip      | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
-| ef-dbcontext-factory-trusted | Generates an IDesignTimeDbContextFactory class for Entity Framework Core |
+| ef-dbcontext-factory         | Generates IDesignTimeDbContextFactory class for Entity Framework Core |
+| ef-dbcontext-factory-ip      | Generates IDesignTimeDbContextFactory class for Entity Framework Core |
+| ef-dbcontext-factory-trusted | Generates IDesignTimeDbContextFactory class for Entity Framework Core |
 
 ## Contributing
 
