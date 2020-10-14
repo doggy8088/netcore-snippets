@@ -2,6 +2,11 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.12.1 - 2020-10-14
+
+* Add TODO for `services-add-spastaticfiles` snippet
+  * `dotnet add package Microsoft.AspNetCore.SpaServices.Extensions`
+
 ## 3.12.0 - 2020-09-12
 
 * Add async snippets for MVC and API

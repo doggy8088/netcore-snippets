@@ -207,6 +207,7 @@
 		"prefix": "services-add-spastaticfiles",
 		"body": [
 			"// In production, the Angular files will be served from this directory",
+			"// TODO: dotnet add package Microsoft.AspNetCore.SpaServices.Extensions",
 			"services.AddSpaStaticFiles(configuration =>",
 			"{",
 			"    configuration.RootPath = \"ClientApp/dist\";",
