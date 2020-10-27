@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.12.2 - 2020-10-27
+
+* Change  all the description property for `<T>` into `&lt;Tgt;` (HTML Entities) to display description correctly in the IntelliSense.
+
 ## 3.12.1 - 2020-10-14
 
 * Add TODO for `services-add-spastaticfiles` snippet

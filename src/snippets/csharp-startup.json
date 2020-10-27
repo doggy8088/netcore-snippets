@@ -221,7 +221,7 @@
 			"services.AddTransient<${1:TService}>();",
 			"$0"
 		],
-		"description": "Startup: services.AddTransient<TService>()"
+		"description": "Startup: services.AddTransient&lt;TService&gt;()"
 	},
 	"services.AddTransient<IService, TImplementation>()": {
 		"prefix": "services-add-transient-2",
@@ -239,7 +239,7 @@
 			"});",
 			"$0"
 		],
-		"description": "Startup: service.AddTransient<T>(FactoryMethod)"
+		"description": "Startup: service.AddTransient&lt;T&gt;(FactoryMethod)"
 	},
 	"services.AddScoped<TService>()": {
 		"prefix": "services-add-scoped-1",
@@ -247,7 +247,7 @@
 			"services.AddScoped<${1:TService}>();",
 			"$0"
 		],
-		"description": "Startup: services.AddScoped<TService>()"
+		"description": "Startup: services.AddScoped&lt;TService&gt;()"
 	},
 	"services.AddScoped<IService, TImplementation>()": {
 		"prefix": "services-add-scoped-2",
@@ -265,7 +265,7 @@
 			"});",
 			"$0"
 		],
-		"description": "Startup: service.AddScoped<T>(FactoryMethod)"
+		"description": "Startup: service.AddScoped&lt;T&gt;(FactoryMethod)"
 	},
 	"services.AddSingleton<TService>()": {
 		"prefix": "services-add-singleton-1",
@@ -273,7 +273,7 @@
 			"services.AddSingleton<${1:TService}>();",
 			"$0"
 		],
-		"description": "Startup: services.AddSingleton<TService>()"
+		"description": "Startup: services.AddSingleton&lt;TService&gt;()"
 	},
 	"services.AddSingleton<IService, TImplementation>()": {
 		"prefix": "services-add-singleton-2",
@@ -291,7 +291,7 @@
 			"});",
 			"$0"
 		],
-		"description": "Startup: service.AddSingleton<T>(FactoryMethod)"
+		"description": "Startup: service.AddSingleton&lt;T&gt;(FactoryMethod)"
 	},
 	"services.AddSingleton<IService>(new TService())": {
 		"prefix": "services-add-singleton-4",
@@ -355,12 +355,12 @@
 		],
 		"description": "service.AddAuthentication().AddJwtBearer()"
 	},
-	"services.Configure()": {
+	"services.Configure<AppSettings>()": {
 		"prefix": "services-configure",
 		"body": [
-			"services.Configure<${1:AppSettings}>(Configuration${2:.GetSection(\"${3:MyApp}\")});"
+			"services.Configure<${1:AppSettings}>(Configuration${2:.GetSection(\"${1}\")});"
 		],
-		"description": "services.Configure()"
+		"description": "services.Configure&lt;AppSettings&gt;()"
 	},
 	"app.UseSpa": {
 		"prefix": "app-use-spa",
