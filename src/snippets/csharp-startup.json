@@ -145,7 +145,7 @@
 			"    options.UseSqlServer(Configuration.GetConnectionString(\"${2:DefaultConnection}\")));",
 			"$0"
 		],
-		"description": "Startup: services.AddDbContext() with UseSqlServer in ConfigureServices() method"
+		"description": "Startup: services.AddDbContext&lt;TContext&gt;() with UseSqlServer in ConfigureServices() method"
 	},
 	"service.AddDbContext-UseSqlite": {
 		"prefix": "services-add-dbcontext-sqlite",
@@ -155,7 +155,7 @@
 			"    options.UseSqlite(\"Data Source=${2:Database}.db\")));",
 			"$0"
 		],
-		"description": "Startup: services.AddDbContext() with UseSqlite in ConfigureServices() method"
+		"description": "Startup: services.AddDbContext&lt;TContext&gt;() with UseSqlite in ConfigureServices() method"
 	},
 	"service.AddDbContext-UseInMemoryDatabase": {
 		"prefix": "services-add-dbcontext-inmemory",
@@ -164,7 +164,7 @@
 			"    options.UseInMemoryDatabase(\"${2:name}\"));",
 			"$0"
 		],
-		"description": "Startup: services.AddDbContext() with UseInMemoryDatabase in ConfigureServices() method"
+		"description": "Startup: services.AddDbContext&lt;TContext&gt;() with UseInMemoryDatabase in ConfigureServices() method"
 	},
 	"service.AddMvc()": {
 		"prefix": "services-add-mvc",
@@ -299,7 +299,7 @@
 			"services.AddSingleton<I${1:TService}>(new ${2:${1}}($3));",
 			"$0"
 		],
-		"description": "Startup: services.AddSingleton<IService>(new TService())"
+		"description": "Startup: services.AddSingleton&lt;IService&gt;(new TService())"
 	},
 	"service.AddAuthentication().AddCookie()": {
 		"prefix": "services-add-auth-cookie",
