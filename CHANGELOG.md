@@ -2,6 +2,12 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.13.0 - 2020-10-29
+
+* Add [EditorConfig](https://editorconfig.org/) snippets for C# project
+  * `c#` or `roslyn`
+  * You have to install [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) extension.
+
 ## 3.12.3 - 2020-10-28
 
 * Change  all the description property for `<T>` into `&lt;Tgt;` (HTML Entities) to display description correctly in the IntelliSense.

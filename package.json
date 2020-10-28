@@ -2,7 +2,7 @@
   "name": "netcore-snippets",
   "displayName": "Essential ASP.NET Core 3 Snippets",
   "description": "High quality Code Snippets that boost your ASP.NET Core development productivity.",
-  "version": "3.12.3",
+  "version": "3.13.0",
   "publisher": "doggy8088",
   "icon": "icon.png",
   "repository": "https://github.com/doggy8088/netcore-snippets",
@@ -61,6 +61,10 @@
       {
         "language": "msbuild",
         "path": "./snippets/msbuild.json"
+      },
+      {
+        "language": "editorconfig",
+        "path": "./snippets/editorconfig.json"
       }
     ]
   }

@@ -235,6 +235,15 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | ef-dbcontext-factory-ip      | Generates IDesignTimeDbContextFactory class for Entity Framework Core |
 | ef-dbcontext-factory-trusted | Generates IDesignTimeDbContextFactory class for Entity Framework Core |
 
+## Misc
+
+### EditorConfig Snippets (`.editorconfig`)
+
+| Prefix                      | Description                                                       |
+| --------------------------- | ----------------------------------------------------------------- |
+| c#                          | Generates `.editorconfig` for Roslyn (C#) project                 |
+| roslyn                      | Generates `.editorconfig` for Roslyn (C#) project                 |
+
 ## Contributing
 
 If you need any ASP.NET Core / Entity Framework Core snippets, please feel free to send PRs to me or simply [drop me a note](https://github.com/doggy8088/netcore-snippets/issues)! 😊
