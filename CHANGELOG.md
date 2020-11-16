@@ -2,6 +2,10 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.14.0 - 2020-11-16
+
+* Turn [MSBuild project tools](https://marketplace.visualstudio.com/items?itemName=tintoy.msbuild-project-tools) into a optional extension.
+
 ## 3.13.0 - 2020-10-29
 
 * Add [EditorConfig](https://editorconfig.org/) snippets for C# project
