@@ -433,7 +433,7 @@
 	"SignalR client script": {
 		"prefix": "script:signalr",
 		"body": [
-			"<script src=\"${1:~/lib/microsoft/signalr/dist/browser/signalr.min.js\"></script>"
+			"<script src=\"${1:~/lib/microsoft/signalr/dist/browser/signalr.min.js}\"></script>"
 		],
 		"description": "SignalR client script"
 	},

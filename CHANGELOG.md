@@ -2,7 +2,7 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
-## 3.15.0 - 2020-12-15
+## 3.15.1 - 2020-12-15
 
 * Update `api-action` and `api-action-async` snippet for more practical use case
 * Update `script:signalr-cdn` snippet (ref: <https://cdnjs.com/libraries/microsoft-signalr>)
