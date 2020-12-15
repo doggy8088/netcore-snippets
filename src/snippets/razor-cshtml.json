@@ -426,14 +426,14 @@
 	"SignalR client script from CDN": {
 		"prefix": "script:signalr-cdn",
 		"body": [
-			"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/${1:3.1.7}/signalr.js\"></script>"
+			"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/${1:5.0.1}/signalr.min.js\"></script>"
 		],
 		"description": "SignalR client script from CDN"
 	},
 	"SignalR client script": {
 		"prefix": "script:signalr",
 		"body": [
-			"<script src=\"${1:~/js/signalr/dist/browser/}signalr.js\"></script>"
+			"<script src=\"${1:~/lib/microsoft/signalr/dist/browser/signalr.min.js\"></script>"
 		],
 		"description": "SignalR client script"
 	},

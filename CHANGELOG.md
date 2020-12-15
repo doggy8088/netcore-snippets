@@ -2,6 +2,13 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.15.0 - 2020-12-15
+
+* Update `api-action` and `api-action-async` snippet for more practical use case
+* Update `script:signalr-cdn` snippet (ref: <https://cdnjs.com/libraries/microsoft-signalr>)
+* Update `script:signalr` snippet
+  * `libman install @microsoft/signalr@latest -p unpkg`
+
 ## 3.14.0 - 2020-11-16
 
 * Turn [MSBuild project tools](https://marketplace.visualstudio.com/items?itemName=tintoy.msbuild-project-tools) into a optional extension.

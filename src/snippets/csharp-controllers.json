@@ -125,8 +125,8 @@
 	"Create API action method: GET": {
 		"prefix": "api-action",
 		"body": [
-			"[HttpGet(\"${2}\")]",
-			"public ActionResult<IEnumerable<${1:TModel}>> Get${1}()",
+			"[HttpGet(\"${3}\")]",
+			"public ActionResult<${2:IEnumerable<${1}>}> Get${1:TModel}()",
 			"{",
 			"    return null$0;",
 			"}",
@@ -138,7 +138,7 @@
 		"prefix": "api-action-async",
 		"body": [
 			"[HttpGet(\"${2}\")]",
-			"public async Task<ActionResult<IEnumerable<${1:TModel}>>> Get${1}()",
+			"public async Task<ActionResult<${2:IEnumerable<${1}>}>> Get${1:TModel}()",
 			"{",
 			"    // TODO: Your code here",
 			"    await Task.Yield();",
