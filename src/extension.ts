@@ -22,6 +22,7 @@ const registerCompletionItemProvider = (obj: any, selector: vscode.DocumentSelec
                 const snippet = obj[title];
                 const body = Array.isArray(snippet.body) ? snippet.body.join('\n') : snippet.body;
                 const completion = new vscode.CompletionItem(snippet.prefix);
+                completion.kind = vscode.CompletionItemKind.Snippet;
                 completion.insertText = new vscode.SnippetString(body);
                 completion.documentation = new vscode.MarkdownString(snippet.description);
                 completionItems.push(completion);

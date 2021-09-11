@@ -2,6 +2,11 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 3.15.2 - 2021-09-12
+
+* Change [Code Snippets's icon](https://code.visualstudio.com/api/references/icons-in-labels) from `symbol-property` to `symbol-snippet`.
+  * `completion.kind = vscode.CompletionItemKind.Snippet;`
+
 ## 3.15.1 - 2020-12-15
 
 * Update `api-action` and `api-action-async` snippet for more practical use case
