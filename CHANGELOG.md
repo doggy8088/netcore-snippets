@@ -2,6 +2,17 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 6.0.0 - 2023-03-05
+
+* Support Minimal API for ASP.NET Core 6.0+
+* Including snippets that commonly used in `Program` class. (Top-level statements)
+* Add `EditorConfig.EditorConfig` and `zxh404.vscode-proto3` extensions which this extension might use
+* Change [`activationEvents`](https://code.visualstudio.com/api/references/activation-events) from `*` to specific events related to this extension
+
+## 3.15.3 - 2021-11-15
+
+* Add `MultipleActiveResultSets=True` to `ConnectionString-*` snippets
+
 ## 3.15.2 - 2021-09-12
 
 * Change [Code Snippets's icon](https://code.visualstudio.com/api/references/icons-in-labels) from `symbol-property` to `symbol-snippet`.

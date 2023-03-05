@@ -49,14 +49,14 @@
 	"ConnectionString-Trusted": {
 		"prefix": "connstr-trusted",
 		"body": [
-			"\"${1:DefaultConnection}\": \"Server=${2:(localdb)\\\\\\\\MSSQLLocalDB};Initial Catalog=${3:DBName};Integrated Security=True\"$0"
+			"\"${1:DefaultConnection}\": \"Server=${2:(localdb)\\\\\\\\MSSQLLocalDB};Initial Catalog=${3:DBName};Integrated Security=True;MultipleActiveResultSets=True\"$0"
 		],
 		"description": "ConnectionStrings for SQL Server (Trusted Connection)"
 	},
 	"ConnectionString-IP": {
 		"prefix": "connstr-ip",
 		"body": [
-			"\"${1:DefaultConnection}\": \"Server=${2:localhost};Initial Catalog=${3:DBName};User Id=${4:LoginName};Password=${5:Password}\"$0"
+			"\"${1:DefaultConnection}\": \"Server=${2:localhost};Initial Catalog=${3:DBName};User Id=${4:LoginName};Password=${5:Password};MultipleActiveResultSets=True\"$0"
 		],
 		"description": "ConnectionStrings for SQL Server (IP Connection)"
 	},

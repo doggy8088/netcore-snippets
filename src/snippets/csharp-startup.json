@@ -120,7 +120,7 @@
 		],
 		"description": "Create a Startup class in Startup.cs"
 	},
-	"service.AddCors": {
+	"services.AddCors": {
 		"prefix": "services-add-cors",
 		"body": [
 			"services.AddCors(options =>",
@@ -135,9 +135,9 @@
 			"});",
 			"$0"
 		],
-		"description": "service.AddCors"
+		"description": "services.AddCors"
 	},
-	"service.AddDbContext-UseSqlServer": {
+	"services.AddDbContext-UseSqlServer": {
 		"prefix": "services-add-dbcontext",
 		"body": [
 			"// using Microsoft.EntityFrameworkCore;",
@@ -147,7 +147,7 @@
 		],
 		"description": "Startup: services.AddDbContext&lt;TContext&gt;() with UseSqlServer in ConfigureServices() method"
 	},
-	"service.AddDbContext-UseSqlite": {
+	"services.AddDbContext-UseSqlite": {
 		"prefix": "services-add-dbcontext-sqlite",
 		"body": [
 			"// using Microsoft.EntityFrameworkCore;",
@@ -157,7 +157,7 @@
 		],
 		"description": "Startup: services.AddDbContext&lt;TContext&gt;() with UseSqlite in ConfigureServices() method"
 	},
-	"service.AddDbContext-UseInMemoryDatabase": {
+	"services.AddDbContext-UseInMemoryDatabase": {
 		"prefix": "services-add-dbcontext-inmemory",
 		"body": [
 			"services.AddDbContext<${1:ContextName}Context>(options =>",
@@ -166,14 +166,14 @@
 		],
 		"description": "Startup: services.AddDbContext&lt;TContext&gt;() with UseInMemoryDatabase in ConfigureServices() method"
 	},
-	"service.AddMvc()": {
+	"services.AddMvc()": {
 		"prefix": "services-add-mvc",
 		"body": [
 			"services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);"
 		],
 		"description": "Startup: services.AddMvc() on ConfigureServices()"
 	},
-	"service.AddMvc() with AddJsonOptions() with Converts": {
+	"services.AddMvc() with AddJsonOptions() with Converts": {
 		"prefix": "services-add-mvc-json-converters",
 		"body": [
 			"services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
@@ -183,7 +183,7 @@
 		],
 		"description": "Startup: services.AddMvc() on ConfigureServices()"
 	},
-	"service.AddMvc() with AddJsonOptions() with DefaultContractResolver": {
+	"services.AddMvc() with AddJsonOptions() with DefaultContractResolver": {
 		"prefix": "services-add-mvc-json-default",
 		"body": [
 			"services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
@@ -193,7 +193,7 @@
 		],
 		"description": "Startup: services.AddMvc() on ConfigureServices()"
 	},
-	"service.AddMvc() with AddJsonOptions() with CamelCasePropertyNamesContractResolver": {
+	"services.AddMvc() with AddJsonOptions() with CamelCasePropertyNamesContractResolver": {
 		"prefix": "services-add-mvc-json-camel",
 		"body": [
 			"services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)",
@@ -231,7 +231,7 @@
 		],
 		"description": "Startup: services.AddTransient<IService, TImplementation>()"
 	},
-	"service.AddTransient<T>(FactoryMethod)": {
+	"services.AddTransient<T>(FactoryMethod)": {
 		"prefix": "services-add-transient-3",
 		"body": [
 			"services.AddTransient<I${1:TService}>((IServiceProvider sp) => {",
@@ -239,7 +239,7 @@
 			"});",
 			"$0"
 		],
-		"description": "Startup: service.AddTransient&lt;T&gt;(FactoryMethod)"
+		"description": "Startup: services.AddTransient&lt;T&gt;(FactoryMethod)"
 	},
 	"services.AddScoped<TService>()": {
 		"prefix": "services-add-scoped-1",
@@ -257,7 +257,7 @@
 		],
 		"description": "Startup: services.AddScoped<IService, TImplementation>()"
 	},
-	"service.AddScoped<T>(FactoryMethod)": {
+	"services.AddScoped<T>(FactoryMethod)": {
 		"prefix": "services-add-scoped-3",
 		"body": [
 			"services.AddScoped<I${1:TService}>((IServiceProvider sp) => {",
@@ -265,7 +265,7 @@
 			"});",
 			"$0"
 		],
-		"description": "Startup: service.AddScoped&lt;T&gt;(FactoryMethod)"
+		"description": "Startup: services.AddScoped&lt;T&gt;(FactoryMethod)"
 	},
 	"services.AddSingleton<TService>()": {
 		"prefix": "services-add-singleton-1",
@@ -283,7 +283,7 @@
 		],
 		"description": "Startup: services.AddSingleton<IService, TImplementation>()"
 	},
-	"service.AddSingleton<T>(FactoryMethod)": {
+	"services.AddSingleton<T>(FactoryMethod)": {
 		"prefix": "services-add-singleton-3",
 		"body": [
 			"services.AddSingleton<I${1:TService}>((IServiceProvider sp) => {",
@@ -291,7 +291,7 @@
 			"});",
 			"$0"
 		],
-		"description": "Startup: service.AddSingleton&lt;T&gt;(FactoryMethod)"
+		"description": "Startup: services.AddSingleton&lt;T&gt;(FactoryMethod)"
 	},
 	"services.AddSingleton<IService>(new TService())": {
 		"prefix": "services-add-singleton-4",
@@ -301,7 +301,7 @@
 		],
 		"description": "Startup: services.AddSingleton&lt;IService&gt;(new TService())"
 	},
-	"service.AddAuthentication().AddCookie()": {
+	"services.AddAuthentication().AddCookie()": {
 		"prefix": "services-add-auth-cookie",
 		"body": [
 			"// using Microsoft.AspNetCore.Authentication.Cookies;",
@@ -319,9 +319,9 @@
 			"        // options.EventsType = typeof(CustomCookieAuthenticationEvents);",
 			"    });"
 		],
-		"description": "service.AddAuthentication().AddCookie()"
+		"description": "services.AddAuthentication().AddCookie()"
 	},
-	"service.AddAuthentication().AddJwtBearer()": {
+	"services.AddAuthentication().AddJwtBearer()": {
 		"prefix": "services-add-auth-jwt",
 		"body": [
 			"// dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer",
@@ -353,7 +353,7 @@
 			"        };",
 			"    });"
 		],
-		"description": "service.AddAuthentication().AddJwtBearer()"
+		"description": "services.AddAuthentication().AddJwtBearer()"
 	},
 	"services.Configure<AppSettings>()": {
 		"prefix": "services-configure",
