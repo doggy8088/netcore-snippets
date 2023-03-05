@@ -2,6 +2,11 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 6.0.1 - 2023-03-05
+
+* Rename extension from `Essential ASP.NET Core 6 Snippets` to `Essential ASP.NET Core Snippets`
+* Bug fixed for `services-add-auth-jwt` and `services-add-sqlserver` snippets for Program.cs
+
 ## 6.0.0 - 2023-03-05
 
 * Support Minimal API for ASP.NET Core 6.0+

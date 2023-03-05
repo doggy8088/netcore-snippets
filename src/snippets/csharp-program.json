@@ -54,7 +54,7 @@
 		"body": [
 			"// dotnet add package Microsoft.EntityFrameworkCore.SqlServer",
 			"// using Microsoft.EntityFrameworkCore;",
-			"builder.Services.AddSqlServer<${1:ContextName}Context>(Configuration.GetConnectionString(\"${2:DefaultConnection}\"));",
+			"builder.Services.AddSqlServer<${1:ContextName}Context>(builder.Configuration.GetConnectionString(\"${2:DefaultConnection}\"));",
 			"$0"
 		],
 		"description": "Startup: builder.Services.AddDbContext&lt;TContext&gt;() with UseSqlServer in ConfigureServices() method"
@@ -115,9 +115,9 @@
 		"body": [
 			"// In production, the Angular files will be served from this directory",
 			"// TODO: dotnet add package Microsoft.AspNetCore.SpaServices.Extensions",
-			"builder.Services.AddSpaStaticFiles(configuration =>",
+			"builder.Services.AddSpaStaticFiles(options =>",
 			"{",
-			"    configuration.RootPath = \"ClientApp/dist\";",
+			"    options.RootPath = \"ClientApp/dist\";",
 			"});"
 		],
 		"description": "Startup: builder.Services.AddSpaStaticFiles()"
@@ -232,7 +232,10 @@
 		"prefix": "services-add-auth-jwt",
 		"body": [
 			"// dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer",
-			"services",
+			"// using Microsoft.AspNetCore.Authentication.JwtBearer;",
+			"// using Microsoft.IdentityModel.Tokens;",
+			"// using System.Text;",
+			"builder.Services",
 			"    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)",
 			"    .AddJwtBearer(options =>",
 			"    {",
@@ -247,7 +250,7 @@
 			"",
 			"            // Validate the Issuer",
 			"            ValidateIssuer = true,",
-			"            ValidIssuer = Configuration.GetValue<string>(\"JwtSettings:Issuer\"),",
+			"            ValidIssuer = builder.Configuration.GetValue<string>(\"JwtSettings:Issuer\"),",
 			"",
 			"            ValidateAudience = false,",
 			"            //ValidAudience = \"JwtAuthDemo\", // TODO",
@@ -256,7 +259,7 @@
 			"",
 			"            ValidateIssuerSigningKey = false,",
 			"",
-			"            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<string>(\"JwtSettings:SignKey\")))",
+			"            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>(\"JwtSettings:SignKey\")))",
 			"        };",
 			"    });"
 		],
@@ -265,7 +268,7 @@
 	"builder.Services.Configure<AppSettings>()": {
 		"prefix": "services-configure",
 		"body": [
-			"builder.Services.Configure<${1:AppSettings}>(Configuration${2:.GetSection(\"${1}\")});"
+			"builder.Services.Configure<${1:AppSettings}>(builder.Configuration${2:.GetSection(\"${1}\")});"
 		],
 		"description": "builder.Services.Configure&lt;AppSettings&gt;()"
 	},

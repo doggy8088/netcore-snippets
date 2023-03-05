@@ -4,7 +4,7 @@ import * as vscode from 'vscode';
 
 function readAllText(filename: string) {
     const fullpath = path.join(__dirname, 'snippets', filename);
-    return JSON.parse(fs.readFileSync(fullpath).toString('UTF-8'));
+    return JSON.parse(fs.readFileSync(fullpath, 'utf8'));
 }
 
 const registerCompletionItemProvider = (obj: any, selector: vscode.DocumentSelector) => {

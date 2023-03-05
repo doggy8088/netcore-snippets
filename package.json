@@ -1,8 +1,8 @@
 {
   "name": "netcore-snippets",
-  "displayName": "Essential ASP.NET Core 6 Snippets",
+  "displayName": "Essential ASP.NET Core Snippets",
   "description": "High quality Code Snippets that boost your ASP.NET Core development productivity.",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "publisher": "doggy8088",
   "icon": "icon.png",
   "repository": "https://github.com/doggy8088/netcore-snippets",
@@ -46,11 +46,11 @@
     "vsce:publish:major": "vsce publish major"
   },
   "devDependencies": {
-    "@types/vscode": "^1.39.0",
-    "@types/node": "^10.16.3",
-    "ts-node": "^8.4.1",
-    "typescript": "^3.6.3",
-    "vsce": "^1.66.0"
+    "@types/node": "^16.18.0",
+    "@types/vscode": "^1.44.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "vsce": "^1.103.1"
   },
   "contributes": {
     "snippets": [
