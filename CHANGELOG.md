@@ -2,7 +2,7 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
-## 6.0.2 - 2023-03-18
+## 6.0.3 - 2023-03-18
 
 * Add [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore) to Program.cs
 
