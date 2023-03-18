@@ -2,6 +2,25 @@
 
 All notable changes to the **Essential ASP.NET Core Snippets** will be documented in this file.
 
+## 6.0.2 - 2023-03-18
+
+* Add [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore) to Program.cs
+
+Usage of the `serilog` snippet:
+
+1. Add NuGet package
+
+   ```sh
+   dotnet add package Serilog.AspNetCore
+   ```
+
+2. Open `Program.cs`
+3. Select All (`Ctrl+A`)
+4. Run **Insert Snippet** command and choose `serilog` snippet
+5. Find `TODO:` comment and fix the error
+
+   Move `builder.Host.UseSerilog();` to after `var builder = ...` line
+
 ## 6.0.1 - 2023-03-05
 
 * Rename extension from `Essential ASP.NET Core 6 Snippets` to `Essential ASP.NET Core Snippets`

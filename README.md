@@ -29,6 +29,7 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 | signalr-    | ASP.NET Core SignalR Snippets         |
 | grpc-       | ASP․NET Core gRPC Snippets            |
 | ef-         | Entity Framework Core Snippets        |
+| serilog     | Serilog Snippet                       |
 
 ## ASP.NET Core Snippets
 
@@ -58,37 +59,38 @@ This extension is still in progress.  [Let me know](https://github.com/doggy8088
 
 * ASP.NET Core 6
 
-    | Prefix                           | Description                                                                                                                   |
-    | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-    | services-configure               | Generates `builder.Services.Configure<T>()` in Program.cs                                                                     |
-    | services-add-transient-1         | Generates `builder.Services.AddTransient<TService>()` in Program.cs                                                           |
-    | services-add-transient-2         | Generates `builder.Services.AddTransient<IService, TImplementation>()` in Program.cs                                          |
-    | services-add-transient-3         | Generates `builder.Services.AddTransient<T>(FactoryMethod)` in Program.cs                                                     |
-    | services-add-scoped-1            | Generates `builder.Services.AddScoped<TService>()` in Program.cs                                                              |
-    | services-add-scoped-2            | Generates `builder.Services.AddScoped<IService, TImplementation>()` in Program.cs                                             |
-    | services-add-scoped-3            | Generates `builder.Services.AddScoped<T>(FactoryMethod)` in Program.cs                                                        |
-    | services-add-singleton-1         | Generates `builder.Services.AddSingleton<TService>()` in Program.cs                                                           |
-    | services-add-singleton-2         | Generates `builder.Services.AddSingleton<IService, TImplementation>()` in Program.cs                                          |
-    | services-add-singleton-3         | Generates `builder.Services.AddSingleton<T>(FactoryMethod)` in Program.cs                                                     |
-    | services-add-singleton-4         | Generates `builder.Services.AddSingleton<IService>(new TService())` in Program.cs                                             |
-    | services-add-cors                | Generates `builder.Services.AddCors()` in Program.cs                                                                          |
-    | services-add-sqlserver           | Generates `builder.Services.AddSqlServer()` in Program.cs                                                                     |
-    | services-add-sqlite              | Generates `builder.Services.AddSqlite()` in Program.cs                                                                        |
-    | services-add-dbcontext-inmemory  | Generates `builder.Services.AddDbContext()` with **UseInMemoryDatabase** in Program.cs                                        |
-    | services-add-auth-cookie         | Generates `builder.Services.AddAuthentication().AddCookie()` in Program.cs                                                    |
-    | services-add-auth-jwt            | Generates `builder.Services.AddAuthentication().AddJwtBearer()` in Program.cs                                                 |
-    | services-add-mvc                 | Generates `builder.Services.AddControllersWithViews()` in Program.cs                                                          |
-    | services-add-mvc-json-default    | Generates `builder.Services.AddControllersWithViews()` with `AddJsonOptions()` using `DefaultContractResolver`                |
-    | services-add-mvc-json-camel      | Generates `builder.Services.AddControllersWithViews()` with `AddJsonOptions()` using `CamelCasePropertyNamesContractResolver` |
-    | services-add-mvc-json-converters | Generates `builder.Services.AddControllersWithViews()` with `AddJsonOptions()` using custom Converters                        |
-    | services-add-spastaticfiles      | Generates `builder.Services.AddSpaStaticFiles()` in Program.cs                                                                |
-    | app-use                          | Generates `app.Use()` in Program.cs                                                                                           |
-    | app-run                          | Generates `app.Run()` in Program.cs                                                                                           |
-    | app-map                          | Generates `app.Map()` in Program.cs                                                                                           |
-    | app-use-spa                      | Generates `app.UseSpa()` in Program.cs                                                                                        |
-    | app-use-staticfiles              | Generates `app.UseStaticFiles()` in Program.cs                                                                                |
-    | app-use-defaultfiles             | Generates `app.UseDefaultFiles()` in Program.cs                                                                               |
-    | app-use-directorybrowser         | Generates `app.UseDirectoryBrowser()` in Program.cs                                                                           |
+    | Prefix                           | Description                                                                                                                                                                                 |
+    | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | services-configure               | Generates `builder.Services.Configure<T>()` in Program.cs                                                                                                                                   |
+    | services-add-transient-1         | Generates `builder.Services.AddTransient<TService>()` in Program.cs                                                                                                                         |
+    | services-add-transient-2         | Generates `builder.Services.AddTransient<IService, TImplementation>()` in Program.cs                                                                                                        |
+    | services-add-transient-3         | Generates `builder.Services.AddTransient<T>(FactoryMethod)` in Program.cs                                                                                                                   |
+    | services-add-scoped-1            | Generates `builder.Services.AddScoped<TService>()` in Program.cs                                                                                                                            |
+    | services-add-scoped-2            | Generates `builder.Services.AddScoped<IService, TImplementation>()` in Program.cs                                                                                                           |
+    | services-add-scoped-3            | Generates `builder.Services.AddScoped<T>(FactoryMethod)` in Program.cs                                                                                                                      |
+    | services-add-singleton-1         | Generates `builder.Services.AddSingleton<TService>()` in Program.cs                                                                                                                         |
+    | services-add-singleton-2         | Generates `builder.Services.AddSingleton<IService, TImplementation>()` in Program.cs                                                                                                        |
+    | services-add-singleton-3         | Generates `builder.Services.AddSingleton<T>(FactoryMethod)` in Program.cs                                                                                                                   |
+    | services-add-singleton-4         | Generates `builder.Services.AddSingleton<IService>(new TService())` in Program.cs                                                                                                           |
+    | services-add-cors                | Generates `builder.Services.AddCors()` in Program.cs                                                                                                                                        |
+    | services-add-sqlserver           | Generates `builder.Services.AddSqlServer()` in Program.cs                                                                                                                                   |
+    | services-add-sqlite              | Generates `builder.Services.AddSqlite()` in Program.cs                                                                                                                                      |
+    | services-add-dbcontext-inmemory  | Generates `builder.Services.AddDbContext()` with **UseInMemoryDatabase** in Program.cs                                                                                                      |
+    | services-add-auth-cookie         | Generates `builder.Services.AddAuthentication().AddCookie()` in Program.cs                                                                                                                  |
+    | services-add-auth-jwt            | Generates `builder.Services.AddAuthentication().AddJwtBearer()` in Program.cs                                                                                                               |
+    | services-add-mvc                 | Generates `builder.Services.AddControllersWithViews()` in Program.cs                                                                                                                        |
+    | services-add-mvc-json-default    | Generates `builder.Services.AddControllersWithViews()` with `AddJsonOptions()` using `DefaultContractResolver`                                                                              |
+    | services-add-mvc-json-camel      | Generates `builder.Services.AddControllersWithViews()` with `AddJsonOptions()` using `CamelCasePropertyNamesContractResolver`                                                               |
+    | services-add-mvc-json-converters | Generates `builder.Services.AddControllersWithViews()` with `AddJsonOptions()` using custom Converters                                                                                      |
+    | services-add-spastaticfiles      | Generates `builder.Services.AddSpaStaticFiles()` in Program.cs                                                                                                                              |
+    | app-use                          | Generates `app.Use()` in Program.cs                                                                                                                                                         |
+    | app-run                          | Generates `app.Run()` in Program.cs                                                                                                                                                         |
+    | app-map                          | Generates `app.Map()` in Program.cs                                                                                                                                                         |
+    | app-use-spa                      | Generates `app.UseSpa()` in Program.cs                                                                                                                                                      |
+    | app-use-staticfiles              | Generates `app.UseStaticFiles()` in Program.cs                                                                                                                                              |
+    | app-use-defaultfiles             | Generates `app.UseDefaultFiles()` in Program.cs                                                                                                                                             |
+    | app-use-directorybrowser         | Generates `app.UseDirectoryBrowser()` in Program.cs                                                                                                                                         |
+    | serilog                          | Add [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore) to Program.cs<br>Usage: 1. Open `Program.cs` 2. Select All (`Ctrl+A`) 3. Insert Snippet 4. Choose `serilog` snippet |
 
 ### C\# (`**/Startup*.cs`)
 
